@@ -1,0 +1,327 @@
+services:
+  nginx:
+    image: quay.io/nixroxursox/nginx:1.5
+    user: nginx:nginx
+    restart: always
+    ports:
+      - 8888:8888
+      - 8484:8484
+    networks:
+      ecommnet:
+        ipv4_address: 10.89.7.10
+      dnsnet:
+        ipv4_address: 10.89.6.10
+    extra_hosts:
+      - "php_nginx.gc-pay.com: 10.89.7.10"
+      - "mysqld.gc-pay.com: 10.89.7.5"
+      - "php.gc-pay.com: 10.89.7.3"
+      - "bitcoind.gc-pay.com: 10.89.7.9"
+      - "postgres.gc-pay.com: 10.89.7.7"
+      - "adminer.gc-pay.com: 10.89.7.6"
+      - "monerod.gc-pay.com: 10.89.7.12" 
+    hostname: php_nginx.gc-pay.com
+    volumes:
+      - type: bind
+        source: /Users/rjallen/ecom/docker_compose/nnginx/data
+        target: /var/www
+      - type: bind
+        source: /Users/rjallen/ecom/docker_compose/nnginx
+        target: /etc/nginx
+      - type: volume
+        source: sockets
+        target: /tmp
+
+  php:
+    image: quay.io/nixroxursox/php:2.6
+    user: phpUser:phpUser
+    command: php-fpm
+    environment:
+      # You can move these environment variables to your .env.local file
+      PHP_DATE_TIMEZONE: ${PHP_DATE_TIMEZONE:-UTC}
+      XDEBUG_MODE: debug
+      XDEBUG_CONFIG: client_host=php.gc-pay.com
+        client_port=9003
+        log=/dev/stdout
+      # This should correspond to the server declared in PHPStorm `Preferences | Languages & Frameworks | PHP | Servers`
+      # Then PHPStorm will use the corresponding path mappings
+      PHP_IDE_CONFIG: serverName=php
+    networks:
+      ecommnet:
+        ipv4_address: 10.89.7.3
+    ports:
+      - 9003:9003
+    extra_hosts:
+      - "php_nginx.gc-pay.com: 10.89.7.10"
+      - "mysqld.gc-pay.com: 10.89.7.5"
+      - "php.gc-pay.com: 10.89.7.3"
+      - "bitcoind.gc-pay.com: 10.89.7.9"
+      - "postgres.gc-pay.com: 10.89.7.7"
+      - "adminer.gc-pay.com: 10.89.7.6"
+      - "monerod.gc-pay.com: 10.89.7.12" 
+    hostname: php.gc-pay.com
+    volumes:
+      - type: bind
+        source: /Users/rjallen/ecom/docker_compose/php-8.4.17/config_files/php-fpm.conf
+        target: /usr/local/etc/php-fpm.conf
+      - type: volume
+        source: so_files
+        target: /usr/local/lib/php/extensions/no-debug-non-zts-20240924
+      - type: bind
+        source: /Users/rjallen/ecom/docker_compose/php-8.4.17/config_files/php
+        target: /usr/local/etc/php
+      - type: bind
+        source: /Users/rjallen/ecom/src/php-webapp/public                
+        target: /var/www/html/public
+      - type: bind
+        source: /Users/rjallen/ecom/src/php-webapp/app                
+        target: /var/www/html/app
+      - type: bind
+        source: /Users/rjallen/ecom/docker_compose/php-8.4.17/home_dir
+        target: /home/phpUser
+      - type: bind
+        source: /Users/rjallen/ecom/docker_compose/php-8.4.17/config_files/php-fpm.d
+        target: /usr/local/etc/php-fpm.d
+      - type: bind
+        source: /Users/rjallen/ecom/docker_compose/php-8.4.17/certs
+        target: /var/www/html/app/lib/certs
+      - type: volume
+        source: sockets
+        target: /tmp
+      - type: volume
+        source: pools
+        target: /tmp/pools/www
+    restart: unless-stopped
+
+  bitcoind:
+    image: quay.io/nixroxursox/bitcoind:2.9
+    user: bitcoin:bitcoin
+    command: /usr/local/bin/docker_entrypoint.sh
+    environment:
+      # You can move these environment variables to your .env.local file
+      PATH: $PATH:/home/bitcoin/bin
+    networks:
+      ecommnet:
+        ipv4_address: 10.89.7.9
+    ports:
+      - 8332:8332
+      - 8333:8333
+    extra_hosts:
+      - "php_nginx.gc-pay.com: 10.89.7.10"
+      - "mysqld.gc-pay.com: 10.89.7.5"
+      - "php.gc-pay.com: 10.89.7.3"
+      - "bitcoind.gc-pay.com: 10.89.7.9"
+      - "postgres.gc-pay.com: 10.89.7.7"
+      - "adminer.gc-pay.com: 10.89.7.6"
+      - "monerod.gc-pay.com: 10.89.7.12" 
+    hostname: php.gc-pay.com
+    volumes:
+      - type: volume
+        source: bitcoin
+        target: /opt/bitcoin
+      - type: bind
+        source: /Users/rjallen/ecom/docker_compose/bitcoind/home_dir
+        target: /home/bitcoin  
+      # - type: bind
+      #   source: /Users/rjallen/ecom/docker_compose/bitcoind/config_files/bitcoin.conf
+      #   target: /opt/bitcoin/bitcoin.conf
+      - type: bind
+        source: /Users/rjallen/ecom/docker_compose/bitcoind/tor
+        target: /home/tor
+      - type: volume
+        source: sockets
+        target: /tmp
+    restart: unless-stopped
+
+  monerod:
+    image: hvalev/monero-node:latest
+    container_name: monerod
+    #user: monerod:monerod
+    networks:
+      ecommnet:
+        ipv4_address: 10.89.7.12
+    ports:
+    #monerod port
+      - 18080:18080
+    #monerod-gui port
+      - 3000:3000
+    volumes:
+      - /Users/rjallen/ecom/docker_compose/monerod/chain:/data
+      - /Users/rjallen/ecom/docker_compose/monerod/log:/log
+      #include only when you want to override the default config file
+      - /Users/rjallen/ecom/docker_compose/monerod/config_files/monerod.conf:/monerod.conf
+    hostname: monerod.gc-pay.com
+
+  monerod-gui:
+    image: hvalev/monero-dashboard:latest
+    container_name: monerod-gui
+    network_mode: service:monerod
+    environment:
+      - MONERO_HOST=0.0.0.0
+      - MONERO_PORT=18081
+      - TICKER=true
+      - PORT=3000
+    extra_hosts:
+      - "php_nginx.gc-pay.com: 10.89.7.10"
+      - "mysqld.gc-pay.com: 10.89.7.5"
+      - "php.gc-pay.com: 10.89.7.3"
+      - "bitcoind.gc-pay.com: 10.89.7.9"
+      - "postgres.gc-pay.com: 10.89.7.7"
+      - "adminer.gc-pay.com: 10.89.7.6"
+      - "monerod.gc-pay.com: 10.89.7.12"
+      - "monerod-gui.gc-pay.com: 10.89.7.4"
+    hostname: monerod-gui.gc-pay.com
+    depends_on:
+      - monerod
+
+  
+  mysqld:
+    image: docker.io/itsnix/mysql:2.1 
+    platform: linux/amd64
+    user: mysql:mysql
+    command: mysqld &
+    healthcheck:
+        test: '/usr/bin/mysql --execute "SHOW databases;"'
+        timeout: 3s
+        interval: 1s
+        retries: 10
+    environment:
+      - MYSQL_HOST=mysqld.gc-pay.com
+      - MYSQL_DATABASE=website_App
+      - MYSQL_USER=mysql
+      - MYSQL_PASSWORD=changeMe
+      - MYSQL_ROOT_PASSWORD=changeMe
+      - MYSQL_PORT=3306
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+    cap_add:
+        - SYS_NICE # prevent "mbind: Operation not permitted" errors
+    volumes:
+    - type: bind
+      source: /Users/rjallen/ecom/docker_compose/mysql/certs
+      target: /etc/certs
+    - type: bind
+      source: /Users/rjallen/ecom/docker_compose/mysql/my.cnf
+      target: /etc/my.cnf
+    - type: volume
+      source: mysql-data
+      target: /var/lib/mysql
+    - type: volume
+      source: mysql-logs
+      target: /var/lib/mysql-logs
+    - type: volume
+      source: mysql-files
+      target: /var/lib/mysql-files
+    - type: volume
+      source: sockets
+      target: /tmp
+    ports:
+        - "3306:3306"
+        - 33060:33060
+    networks:
+      ecommnet:
+        ipv4_address: 10.89.7.5
+    extra_hosts:
+      - "php_nginx.gc-pay.com: 10.89.7.10"
+      - "mysqld.gc-pay.com: 10.89.7.5"
+      - "php.gc-pay.com: 10.89.7.3"
+      - "bitcoind.gc-pay.com: 10.89.7.9"
+      - "postgres.gc-pay.com: 10.89.7.7"
+      - "adminer.gc-pay.com: 10.89.7.6"
+      - "monerod.gc-pay.com: 10.89.7.12" 
+    hostname: mysqld.gc-pay.com
+
+  # postgres:
+  #   image: quay.io/nixroxursox/postgres:1.7
+  #   user: postgres:postgres
+  #   command: /usr/lib/postgresql/18/bin/postgres -d5 -D /postgres/data/market &
+  #   restart: always
+  #   # set shared memory limit when using docker compose
+  #   shm_size: 1024mb
+  #   # or set shared memory limit when deploy via swarm stack
+  #   environment:
+  #     - POSTGRES_USER=postgres
+  #     - PGDATA=/postgres/data/market
+  #     - POSTGRES_DB=market
+  #     - POSTGRES_PASSWORD='pass123'
+  #     - SHELL=/bin/bash
+  #   volumes:
+  #     - type: bind
+  #       source: /Users/rjallen/ecom/docker_compose/postgres/postgresql.conf
+  #       target: /postgres/data/market/postgresql.conf
+  #     - type: bind
+  #       source: /Users/rjallen/ecom/docker_compose/postgres/backup
+  #       target: /backup
+  #     - type: volume
+  #       source: sockets
+  #       target: /tmp
+  #     - type: volume
+  #       source: postgres-data
+  #       target: /postgres/data
+  #     - type: bind
+  #       source: /Users/rjallen/ecom/docker_compose/postgres/pg_home
+  #       target: /home/postgres
+  #     - type: tmpfs
+  #       target: /dev/shm
+  #       tmpfs:
+  #         size: 134217728 # 128*2^20 bytes = 128Mb
+  #   ports:
+  #     - 5432:5432
+  #   networks:
+  #     ecommnet:
+  #       ipv4_address: 10.89.7.7
+  #   extra_hosts:
+  #     - "php_nginx.gc-pay.com: 10.89.7.10"
+  #     - "mysqld.gc-pay.com: 10.89.7.5"
+  #     - "php.gc-pay.com: 10.89.7.3"
+  #     - "bitcoind.gc-pay.com: 10.89.7.9"
+  #     - "postgres.gc-pay.com: 10.89.7.7"
+  #     - "adminer.gc-pay.com: 10.89.7.6"
+  #     - "monerod.gc-pay.com: 10.89.7.12" 
+  #   hostname: postgresd.gc-pay.com
+
+  adminer:
+    image: adminer
+    restart: always
+    volumes:
+      - type: volume
+        source: sockets
+        target: /tmp
+    ports:
+      - "8080:8080"
+    networks:
+      ecommnet:
+        ipv4_address: 10.89.7.6
+    extra_hosts:
+      - "php_nginx.gc-pay.com: 10.89.7.10"
+      - "mysqld.gc-pay.com: 10.89.7.5"
+      - "php.gc-pay.com: 10.89.7.3"
+      - "bitcoind.gc-pay.com: 10.89.7.9"
+      - "postgres.gc-pay.com: 10.89.7.7"
+      - "adminer.gc-pay.com: 10.89.7.6"
+      - "monerod.gc-pay.com: 10.89.7.12" 
+    hostname: adminer.gc-pay.com
+
+volumes:
+  sockets:
+  so_files:
+  bitcoin:
+  mysql-data:
+  mysql-logs:
+  mysql-files:
+  postgres-data:
+  odooProd-logs:
+  pools:
+    driver: local
+
+networks:
+  ecommnet:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.89.7.0/26
+          gateway: 10.89.7.1
+  dnsnet:
+    driver: bridge
+    ipam:
+      config:
+      - subnet: 10.89.6.0/26
+        gateway: 10.89.6.1

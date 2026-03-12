@@ -1,0 +1,95 @@
+<?php $title = 'Login | '.$_SERVER['HTTP_HOST'] ?>
+<!DOCTYPE html>
+<!--[if IE 9]>
+<html class="lt-ie10" lang="en"> <![endif]-->
+<html lang="en">
+<title><?php if (isset($title)): ?> <?= $title ?> <?php else: ?>
+    <?php  echo $_SERVER['HTTP_HOST']; ?> <?php endif ?>
+</title>
+<head>
+    <meta charset="UTF-8">
+    <meta content="Freedom of expression Bazaar" name="description">
+    <meta content="weed" name="keywords">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="http://localhost/css/normalize.css" rel="stylesheet"
+          type="text/css">
+    <link href="http://localhost/fa/css/all.css" rel="stylesheet"
+          type="text/css">
+    <link href="http://localhost/css/w3.css" rel="stylesheet"
+          type="text/css">
+    <link href="http://localhost/css/website.css" rel="stylesheet"
+          type="text/css">
+
+    <style type="text/css">
+
+        #section-login {
+			align-content: center;
+		}
+        #section-navbar {
+            color: #670000;
+        }
+        #section-captcha    {
+            height: 144px;
+            width: 144px;
+        }
+		.navbar-styled	{
+			width: 90%;
+			align: center;
+		}
+    </style>
+</head>
+<body>
+<? if(isset($error)): ?>
+<div class="alert-box alert" data-alert>
+    <?=$this->e($error) ?>
+</div>
+<? endif ?>
+<? if($this->fl('success')): ?>
+<div class="alert-box success" data-alert>
+    <?=$this->fl('success') ?>
+</div>
+<? endif ?>
+	<header>
+
+<section class="w3-section">
+	<div class="search">
+		<input class="searchTerm" placeholder="What are you looking for?" type="text">
+		<button class="searchButton" type="submit">
+			<i class="fa fa-search"></i>
+		</button>
+	</div>
+	<ul class="dropdown w3-bg-light">
+		<li class="dropdown-content"></li>
+		<li class="w3-bg-dark" ><a href="?c=orders&a=index">Current Orders</a></li>
+		<li ><a href="?c=orders&a=history">Order History</a></li>
+	</ul>
+	<ul class="dropdown w3-bg-light">
+		<li class="dropdown-content"></li>
+		<li ><a href="?c=orders&a=index">PGP Key</a></li>
+		<li ><a href="?c=orders&a=history">Password and PIN</a></li>
+		<li ><a href="?c=orders&a=history">MultiSig!</a></li>
+	</ul>
+	<ul class="dropdown w3-bg-light">
+		<li class="dropdown-content"></li>
+		<li ><a href="?c=orders&a=index">Open A Case</a></li>
+		<li ><a href="?c=orders&a=history">My Tickets</a></li>
+		<li ><a href="?c=orders&a=history">Support History</a></li>
+	</ul>
+	<ul class="dropdown w3-bg-light">
+		<li class="dropdown-content"></li>
+		<li ><a href="?c=orders&a=index">Balance</a></li>
+		<li ><a href="?c=orders&a=history">My Altcoins</a></li>
+		<li ><a href="?c=orders&a=history">Configure History</a></li>
+	</ul>
+	<ul class="dropdown w3-bg-light">
+		<li class="dropdown-content"></li>
+		<li ><a href="?c=orders&a=index">Messages</a></li>
+		<li ><a href="?c=orders&a=history">Live! chat</a></li>
+		<li ><a href="?c=orders&a=history">Archived</a></li>
+	</ul>
+</section>
+	</header>
+
+
+</body>
+</html>

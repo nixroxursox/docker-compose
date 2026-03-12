@@ -1,0 +1,127 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "7a6383943e1c404d049f58908ed029d3",
+    "packages": [
+        {
+            "name": "mongodb/mongodb-extension",
+            "version": "2.1.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mongodb/mongo-php-driver.git",
+                "reference": "d1157482be1ece81ecf1d5725041c2db9225810b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mongodb/mongo-php-driver/zipball/d1157482be1ece81ecf1d5725041c2db9225810b",
+                "reference": "d1157482be1ece81ecf1d5725041c2db9225810b",
+                "shasum": ""
+            },
+            "require": {
+                "ext-date": "*",
+                "ext-json": "*",
+                "php": ">=8.1,<9"
+            },
+            "type": "php-ext",
+            "notification-url": "https://packagist.org/downloads/",
+            "php-ext": {
+                "extension-name": "mongodb",
+                "configure-options": [
+                    {
+                        "name": "enable-mongodb-coverage",
+                        "description": "Enable code coverage",
+                        "needs-value": true
+                    },
+                    {
+                        "name": "enable-mongodb-crypto-system-profile",
+                        "description": "Use system crypto profile (OpenSSL only) (yes/no)",
+                        "needs-value": true
+                    },
+                    {
+                        "name": "enable-mongodb-developer-flags",
+                        "description": "Enable developer flags",
+                        "needs-value": true
+                    },
+                    {
+                        "name": "with-mongodb-client-side-encryption",
+                        "description": "Enable client-side encryption (auto/yes/no)",
+                        "needs-value": true
+                    },
+                    {
+                        "name": "with-mongodb-sasl",
+                        "description": "Enable SASL for Kerberos authentication (auto/cyrus/no)",
+                        "needs-value": true
+                    },
+                    {
+                        "name": "with-mongodb-snappy",
+                        "description": "Enable Snappy for compression (auto/yes/no)",
+                        "needs-value": true
+                    },
+                    {
+                        "name": "with-mongodb-ssl",
+                        "description": "Enable crypto and TLS (auto/openssl/libressl/darwin/no)",
+                        "needs-value": true
+                    },
+                    {
+                        "name": "with-mongodb-system-libs",
+                        "description": "Use system libraries for libbson, libmongoc, and libmongocrypt",
+                        "needs-value": true
+                    },
+                    {
+                        "name": "with-mongodb-zlib",
+                        "description": "Enable zlib for compression (auto/system/bundled/no)",
+                        "needs-value": true
+                    },
+                    {
+                        "name": "with-mongodb-zstd",
+                        "description": "Enable zstd for compression (auto/yes/no)",
+                        "needs-value": true
+                    }
+                ],
+                "download-url-method": "pre-packaged-source"
+            },
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Andreas Braun",
+                    "email": "andreas.braun@mongodb.com"
+                },
+                {
+                    "name": "Jeremy Mikola",
+                    "email": "jmikola@gmail.com"
+                },
+                {
+                    "name": "Jérôme Tamarelle",
+                    "email": "jerome.tamarelle@mongodb.com"
+                }
+            ],
+            "description": "MongoDB driver extension",
+            "homepage": "https://jira.mongodb.org/browse/PHPC",
+            "keywords": [
+                "database",
+                "driver",
+                "mongodb",
+                "persistence"
+            ],
+            "support": {
+                "issues": "https://github.com/mongodb/mongo-php-driver/issues",
+                "source": "https://github.com/mongodb/mongo-php-driver/tree/2.1.8"
+            },
+            "time": "2026-02-04T18:15:32+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {},
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {},
+    "platform-dev": {},
+    "plugin-api-version": "2.9.0"
+}

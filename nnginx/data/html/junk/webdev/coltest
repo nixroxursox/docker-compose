@@ -1,0 +1,42 @@
+<?php
+
+//namespace M19;
+
+Class MongoModel extends Model	{
+
+
+	public function get()	{
+		require_once '/code/vendor/autoload.php';
+		require_once "/code/vendor/mongodb/mongodb/src/functions.php";
+		$dbm = new MongoDB\Client(
+			'mongodb://172.16.168.20:27017',
+				[
+			'username' => 'root',
+			'password' => 'example',
+			'authSource' => 'admin'
+				],
+			);
+			return $dbm;
+		}
+
+
+	public function addUser($name, $password, $profile_pin)	{
+				require_once '/code/vendor/autoload.php';
+		$userid = "$name";
+		$pass =	sodium_crypto_pwhash_str($password , 32 , 32768 );
+		$pin = sodium_crypto_pwhash_str($profile_pin , 32 , 32768 );
+		$collection = $dbm->selectCollection(
+			"users",
+			[
+					'readPreference' => new MongoDB\Driver\ReadPreference(MongoDB\Driver\ReadPreference::RP_SECONDARY),
+			]
+		);
+		$insertOneResult = $collection->insertOne([
+    	'name' 		=> 	"$userid",
+    	'password' => "$pass",
+    	'profile_pin' => "$pin",
+		]);
+		printf("Inserted %d document(s)\n", $insertOneResult->getInsertedCount());
+		var_dump($insertOneResult->getInsertedId());
+		}
+	}

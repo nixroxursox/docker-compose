@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html lang="en" >
+<title>
+    <?php if (isset($title)): ?>
+        <?= $title ?>
+    <?php else: ?>
+       <?php  echo $_SERVER['HTTP_HOST']; ?>
+    <?php endif ?>
+</title>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="description" content="Freedom of expression Bazaar">
+      <meta name="keywords" content="weed">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="http://localhost/fa/css/solid.css">
+      <link rel="stylesheet" type="text/css" href="http://localhost/webdev/css/w3.css">
+			<link rel="stylesheet" type="text/css" href="http://localhost/webdev/css/normalize.css">
+      <link rel="stylesheet" type="text/css" href="http://localhost/webdev/css/website.css">
+      <style>
+
+      </style>
+   </head>
+     <body>
+       <header display: inline>
+         <div class="topnav" id="myTopnav">
+           <a href="?c=listings" class="active">Home/Search</a>
+           <div class="topnav-right">
+         <div class="dropdown">
+         <button class="dropbtn">Orders
+         <i class="fas fa-caret-down"></i>
+         </button>
+         <div class="dropdown-content">
+         <a href="?c=orders&a=index">Current Orders</a>
+         <a href="?c=orders&a=history">Order History</a>
+         </div>
+         </div>
+         <div class="dropdown">
+         <button class="dropbtn">My Profile
+         <i class="fa fa-caret-down"></i>
+         </button>
+         <div class="dropdown-content">
+         <a href="?c=orders&a=index">PGP Key</a>
+         <a href="?c=orders&a=history">Password and PIN</a>
+         <a href="?c=orders&a=history">MultiSig!</a>
+         </div>
+         </div>
+         <div class="dropdown">
+         <button class="dropbtn">Support
+         <i class="fa fa-caret-down"></i>
+         </button>
+         <div class="dropdown-content">
+         <a href="?c=orders&a=index">Open A Case</a>
+         <a href="?c=orders&a=history">My Tickets</a>
+         <a href="?c=orders&a=history">Support History</a>
+         </div>
+         </div>
+         <div class="dropdown">
+         <button class="dropbtn">Messages
+         <i class="fa fa-caret-down"></i>
+         </button>
+         <div class="dropdown-content">
+         <a href="?c=orders&a=index">Mail</a>
+         </div>
+         </div>
+
+         <a href="?c=users&a=settings">Vendor Account</a>
+         <div class="dropdown">
+         <button class="dropbtn">Coins
+         <i class="fa fa-caret-down"></i>
+         </button>
+         <div class="dropdown-content">
+         <a href="#">Orders</a>
+         <a href="#">Pending</a>
+         <a href="#">My Wallet</a>
+         </div>
+         </div>
+         <a href="#search">Search</a>
+         <a href="#open-modal"></a>
+         </div>
+<!-- begin modal here - navbar above - grid below -->
+
+
+       </header>
+       <br/>
+       <br/>
+			 <div class="grid-container">
+			 	<div class="grid-item">1</div>
+			 		<div class="grid-item">2</div>
+			 			<div class="grid-item">3</div>
+			 				<div class="grid-item">4</div>
+			 					<div class="grid-item">5</div>
+			 						<div class="grid-item">6</div>
+			 							<div class="grid-item">7</div>
+			 								<div class="grid-item">8</div>
+			 									<div class="grid-item">9</div>
+			 										<div class="grid-item">10</div>
+			 											<div class="grid-item">11</div>
+			 												<div class="grid-item">12</div>
+			 </div>
+
+<?php $content ?>
+
+     </body>
+       <footer>
+      </footer>
+      </html>

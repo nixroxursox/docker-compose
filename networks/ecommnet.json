@@ -1,0 +1,89 @@
+(.python3-13.3) rjallen@mbpro-3 docker_compose % podman network inspect kw_ecommnet
+[
+     {
+          "name": "kw_ecommnet",
+          "id": "6c18ca33ea027162b71f844d8d4477176af198c650fae03997673cde86400e3e",
+          "driver": "bridge",
+          "network_interface": "podman1",
+          "created": "2026-01-09T03:57:51.220410148-05:00",
+          "subnets": [
+               {
+                    "subnet": "10.89.7.0/26",
+                    "gateway": "10.89.7.1"
+               }
+          ],
+          "ipv6_enabled": false,
+          "internal": false,
+          "dns_enabled": true,
+          "labels": {
+               "com.docker.compose.config-hash": "370e068a00d52db9eb136a0f474f96e29f8ef0c62307b1a236a7922a75470778",
+               "com.docker.compose.network": "ecommnet",
+               "com.docker.compose.project": "kw",
+               "com.docker.compose.version": "2.39.4"
+          },
+          "options": {
+               "isolate": "true"
+          },
+          "ipam_options": {
+               "driver": "host-local"
+          },
+          "containers": {
+               "7a12881fcd1cd89bf5b5c4ebb1bfaa2cc5c2735a2f1f9cd79eb186c5eb9de710": {
+                    "name": "kw-php-1",
+                    "interfaces": {
+                         "eth0": {
+                              "subnets": [
+                                   {
+                                        "ipnet": "10.89.7.3/26",
+                                        "gateway": "10.89.7.1"
+                                   }
+                              ],
+                              "mac_address": "86:67:90:65:e0:75"
+                         }
+                    }
+               },
+               "7d8967c9798ea806c647d2422470d92a2ee46887e39966ed4ce7bb452480da74": {
+                    "name": "kw-nginx-1",
+                    "interfaces": {
+                         "eth0": {
+                              "subnets": [
+                                   {
+                                        "ipnet": "10.89.7.10/26",
+                                        "gateway": "10.89.7.1"
+                                   }
+                              ],
+                              "mac_address": "9a:59:f0:3e:e4:18"
+                         }
+                    }
+               },
+               "a00027141c0b859fc58b2f8b90c8b2f0f8c4214524575a9704522f998bf038b1": {
+                    "name": "kw-adminer-1",
+                    "interfaces": {
+                         "eth0": {
+                              "subnets": [
+                                   {
+                                        "ipnet": "10.89.7.6/26",
+                                        "gateway": "10.89.7.1"
+                                   }
+                              ],
+                              "mac_address": "d2:d9:04:da:9f:86"
+                         }
+                    }
+               },
+               "eeaaedee2fbef08ccfca1ef688f9a042c8842d9334e686223680c9394ffbd36c": {
+                    "name": "kw-postgres-1",
+                    "interfaces": {
+                         "eth0": {
+                              "subnets": [
+                                   {
+                                        "ipnet": "10.89.7.7/26",
+                                        "gateway": "10.89.7.1"
+                                   }
+                              ],
+                              "mac_address": "96:eb:7e:0d:b2:77"
+                         }
+                    }
+               }
+          }
+     }
+]

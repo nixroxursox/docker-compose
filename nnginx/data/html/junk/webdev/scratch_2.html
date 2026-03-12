@@ -1,0 +1,107 @@
+<style>
+
+    .parent {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .div1 { grid-area: 1 / 2 / 2 / 12; }
+    .div2 { grid-area: 8 / 2 / 9 / 12; }
+    .div3 { grid-area: 3 / 5 / 7 / 8; }
+
+</style>
+<body>
+
+<div class="parent">
+    <div class="div1">
+        <ul class="ul">
+            <li class="li">
+                <h5>
+                    <a href="http://localhost/img/title.png"><img src="img/title.png" alt="title image" style="width:188px;height:120px;"></a>
+                    <span class="first">M</span>ARKET
+                    </a>
+                </h5>
+            </li>
+        </ul>
+    </div>
+    <div class="col" id="navbar-item2 borders">
+        <?php if ($this->isUserLoggedIn()): ?>
+        <ul class="ul">
+            <li>
+                            <span class="label secondary round account-label">
+                                <?php if ($this->user->is_vendor): ?>
+                                    <i class="fi-pricetag-multiple" title="This account is a vendor account"></i>
+                                <?php endif ?>
+                                <i class="fi-torso" title="Logged in as <?= $this->e($this->user->name) ?>"></i>
+                                <?= $this->e($this->user->name) ?>
+                            </span>
+            </li>
+        </ul>
+    </div>
+    <div class="col" id="navbar-item3">
+        <ul class="ul">
+            <li <?= $this->controller == 'listings' ? ' class="active"' : '' ?>>
+                <a href="?c=listings">Listings</a>
+            </li>
+            <li class="divider"></li>
+            <li <?= $this->controller == 'orders' ? ' class="active"' : '' ?>>
+                <a href="?c=orders">Orders</a>
+            </li>
+            <li class="divider"></li>
+            <li class="has-dropdown not-click">
+                <a>Profile</a>
+                <ul class="dropdown">
+                    <li><label>General</label></li>
+                    <li <?= $this->controller == 'profile' && $this->action == 'settings' ? ' class="active"' : '' ?>>
+                        <a href="?c=profile&a=settings">Settings</a>
+                    </li>
+                    <li <?= $this->action == 'bip32' ? ' class="active"' : '' ?>>
+                        <a href="?c=profile&a=bip32">BIP32 configuration</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li><label>Vendor profile</label></li>
+                    <?php if ($this->user->is_vendor): ?>
+                        <li>
+                            <a href="?c=listings&a=vendor&u=<?= $this->h($this->user->name, false) ?>">Vendor
+                                page</a>
+                        </li>
+                        <li class="has-dropdown not-click">
+                            <a>Listings</a>
+                            <ul class="dropdown">
+                                <li<?= $this->controller == 'products' ? ' class="active"' : '' ?>>
+                                    <a href="?c=products">Products</a>
+                                    </li>
+                                    <li<?= $this->controller == 'shippingOptions' ? ' class="active"' : '' ?>>
+                                        <a href="?c=shippingOptions">Shipping
+                                            options</a>
+                                        </li>
+                            </ul>
+                        </li>
+                    <?php else: ?>
+                    <li<?= $this->controller == 'profile' && $this->action == 'becomeVendor' ? ' class="active"' : '' ?>>
+                        <a href="?c=profile&a=becomeVendor">Become vendor</a>
+                        </li>
+                        <?php endif ?>
+                </ul>
+            </li>
+            <li class="divider"></li>
+            <li class="has-form">
+                <a href="?c=users&a=logout" class="button alert logout">
+                    Logout
+                    <i class="fa fa-sign-out"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <?php endif ?>
+    </div>
+    <div class="div2">
+    </div>
+    <div class="div3">
+    </div>
+</div>
+
+</body>

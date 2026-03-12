@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<title>M19 <?php "$_[SERVERNAME]" ?></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+
+  <style>
+
+  <link rel="stylesheet" type="text/css" href="css/w3.css"/>
+
+    </style>
+    </head>
+<body>
+
+<<div class="large-12 columns">
+<div class="row">
+    <div class="large-12 columns">
+        <nav class="top-bar" data-topbar="">
+            <ul class="title-area">
+                <li class="name">
+                    <h1><a href="?">
+                            <i class="fi-bitcoin"></i>
+                                <span class="title">
+                                    <span class="first">M</span>
+                                      <span class="first">9</span>teen
+                                    <span class="first">M</span>arket
+                                </span>
+                        </a></h1>
+                </li>
+            </ul>
+                    </nav>
+    </div>
+</div>
+<div class="row body">
+
+<div class="large-8 large-offset-2 columns">
+
+    <div id="login-logo-wrapper">
+        <img src="">
+    </div>
+
+    <form action="?c=users&amp;a=doLogin" method="post">
+        <div class="row collapse">
+            <div class="large-4 large-offset-2 columns">
+                <span class="prefix">Username</span>
+            </div>
+            <div class="large-5 columns end">
+                <input type="text" name="name" placeholder="Choose a unique username" required="true" autocomplete="off">
+            </div>
+        </div>
+        <div class="row collapse">
+            <div class="large-4 large-offset-2 columns">
+                <span class="prefix">Password</span>
+            </div>
+            <div class="large-5 columns end">
+                <input type="password" name="password" placeholder="Choose a secure password" required="true" autocomplete="off">
+            </div>
+        </div>
+
+        <div class="row collapse">
+            <div class="large-6 large-offset-2 columns">
+                <img src="?c=users&amp;a=captcha">
+            </div>
+            <div class="large-3 columns end">
+              <input type="text" name="captcha" placeholder="captcha" required="true" autocomplete="off" class="captcha" maxlength="7">
+            </div>
+        </div>
+        <div class="row collapse">
+            <div class="large-9 large-offset-2 columns">
+                <input type="submit" value="Login" class="button expand success">
+            </div>
+        </div>
+        <div class="row collapse">
+            <div class="large-8 large-offset-2 columns text-center">
+                <a href="?c=users&amp;a=register">Register</a>
+            </div>
+        </div>
+</form></div>
+<div class="large-2 columns"></div>
+</div>
+<footer class="row">
+    <div class="large-12 columns">
+        <hr>
+        <div class="row">
+            <div class="large-6 columns">
+                <p>M19</p>
+            </div>
+            <div class="large-6 columns">
+                <ul class="inline-list right">
+                    <li>
+                        <a href="m19.onion" target="_blank">M19</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</body>
+</html>

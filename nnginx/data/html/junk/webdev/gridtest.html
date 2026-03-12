@@ -1,0 +1,90 @@
+<?php $title = 'Login | '.$_SERVER['HTTP_HOST'] ?>
+<!DOCTYPE html>
+<!--[if IE 9]>
+<html class="lt-ie10" lang="en"> <![endif]-->
+<html lang="en">
+<title><?php if (isset($title)): ?> <?= $title ?> <?php else: ?>
+    <?php  echo $_SERVER['HTTP_HOST']; ?> <?php endif ?>
+</title>
+<head>
+    <meta charset="UTF-8">
+    <meta content="Freedom of expression Bazaar" name="description">
+    <meta content="weed" name="keywords">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="http://localhost/css/normalize.css" rel="stylesheet"
+          type="text/css">
+    <link href="http://localhost/fa/css/all.css" rel="stylesheet"
+          type="text/css">
+    <link href="http://localhost/css/w3.css" rel="stylesheet"
+          type="text/css">
+    <link href="http://localhost/css/website.css" rel="stylesheet"
+          type="text/css">
+
+					<style>
+					</style>
+</head>
+<body>
+<div class="w3-card-4 w3-bg-dark">
+						<div class="w3-center">
+							<div class="col w3-center">
+								<div class="row-type">
+									<label class="w3-bg-dark" for="name"><b>Username</b></label>
+								</div>
+									<div class="row w3-padding">
+										<input
+												autocomplete="off" class="input" name="name" placeholder="Choose A Username"
+												required type="text">
+									</div>
+										<div class="row-type">
+										<label class="w3-bg-dark" for="password"><b>Password</b></label>
+									</div>
+										<div class="row">
+											<input
+													autocomplete="off" class="input w3-bg-light" name="password"
+													placeholder="Choose A Password" required type="password">
+										</div>
+											<div class="row-type">
+												<label class="w3-bg-dark" for="password_confirm"><b>Confirm Password</b></label>
+											</div>
+												<div class="row">
+													<input
+														autocomplete="off" class="input w3-bg-light" name="confirm_password"
+														placeholder="Re-type  your  password" required type="password">
+												</div>
+											<div class="row-type">
+											  <label class="w3-bg-dark" for="password"><b>Profile PIN</b></label>
+										  </div>
+												<div class="row">
+													<input
+														autocomplete="off" class="input w3-bg-light" name="profile_pin"
+														placeholder="Choose a Profile PIN" required type="password">
+												</div>
+													<div class="row-type">
+														<label class="w3-bg-dark" for="pin_set"><b>Confirm Profile  PIN</b></label>
+													</div>
+													<div class="row">
+														<input
+															autocomplete="off" class="input w3-bg-light" name="confirm_pin"
+															placeholder="Re-type your PIN" required type="password">
+													</div>
+							</div>
+						</div>
+											<div class="container w3-bg-dark">
+												<div class="col">
+														<img alt="captcha"
+															 class="captcha-img" id="boxshadow" src="http://localhost/index.php?c=users&a=captcha">
+														<div class="row">
+															<input
+					                        autocomplete="off" class="input w3-bg-dark captcha-img" maxlength="7"
+					                        name="captcha" placeholder="Enter Captcha" required type="captcha">
+					                  </div>
+														<div  class="row-style">
+																	<button class="cancelbtn w3-left" type="submit">Login</button>
+																	<button class="cancelbtn w3-right" type="button">Cancel</button>
+															</div>
+												</div>
+											</div>
+</div>
+			</body>
+			<footer>
+			</footer>

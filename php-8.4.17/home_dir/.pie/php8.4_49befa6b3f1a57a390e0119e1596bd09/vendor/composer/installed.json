@@ -1,0 +1,130 @@
+{
+    "packages": [
+        {
+            "name": "mongodb/mongodb-extension",
+            "version": "2.1.8",
+            "version_normalized": "2.1.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mongodb/mongo-php-driver.git",
+                "reference": "d1157482be1ece81ecf1d5725041c2db9225810b"
+            },
+            "dist": {
+                "type": "tar",
+                "url": "https://github.com/mongodb/mongo-php-driver/releases/download/2.1.8/mongodb-2.1.8.tgz",
+                "reference": "d1157482be1ece81ecf1d5725041c2db9225810b",
+                "shasum": ""
+            },
+            "require": {
+                "ext-date": "*",
+                "ext-json": "*",
+                "php": ">=8.1,<9"
+            },
+            "time": "2026-02-04T18:15:32+00:00",
+            "type": "php-ext",
+            "extra": {
+                "pie-target-platform-php-path": "/usr/local/bin/php",
+                "pie-target-platform-php-config-path": "/usr/local/bin/php-config",
+                "pie-target-platform-php-version": "8.4.17",
+                "pie-target-platform-php-thread-safety": "NonThreadSafe",
+                "pie-target-platform-php-windows-compiler": null,
+                "pie-target-platform-architecture": "x86_64",
+                "pie-configure-options": "",
+                "pie-phpize-binary": null,
+                "pie-built-binary": "/home/phpUser/.pie/php8.4_49befa6b3f1a57a390e0119e1596bd09/vendor/mongodb/mongodb-extension/mongodb-2.1.8/modules/mongodb.so",
+                "pie-installed-binary-checksum": "d534a78c3157297536114817ac5757f1a7b29b29f4f107fd8c82d97799ca5689",
+                "pie-installed-binary": "/usr/local/lib/php/extensions/no-debug-non-zts-20240924//mongodb.so"
+            },
+            "installation-source": "dist",
+            "notification-url": "https://packagist.org/downloads/",
+            "php-ext": {
+                "extension-name": "mongodb",
+                "configure-options": [
+                    {
+                        "name": "enable-mongodb-coverage",
+                        "description": "Enable code coverage",
+                        "needs-value": true
+                    },
+                    {
+                        "name": "enable-mongodb-crypto-system-profile",
+                        "description": "Use system crypto profile (OpenSSL only) (yes/no)",
+                        "needs-value": true
+                    },
+                    {
+                        "name": "enable-mongodb-developer-flags",
+                        "description": "Enable developer flags",
+                        "needs-value": true
+                    },
+                    {
+                        "name": "with-mongodb-client-side-encryption",
+                        "description": "Enable client-side encryption (auto/yes/no)",
+                        "needs-value": true
+                    },
+                    {
+                        "name": "with-mongodb-sasl",
+                        "description": "Enable SASL for Kerberos authentication (auto/cyrus/no)",
+                        "needs-value": true
+                    },
+                    {
+                        "name": "with-mongodb-snappy",
+                        "description": "Enable Snappy for compression (auto/yes/no)",
+                        "needs-value": true
+                    },
+                    {
+                        "name": "with-mongodb-ssl",
+                        "description": "Enable crypto and TLS (auto/openssl/libressl/darwin/no)",
+                        "needs-value": true
+                    },
+                    {
+                        "name": "with-mongodb-system-libs",
+                        "description": "Use system libraries for libbson, libmongoc, and libmongocrypt",
+                        "needs-value": true
+                    },
+                    {
+                        "name": "with-mongodb-zlib",
+                        "description": "Enable zlib for compression (auto/system/bundled/no)",
+                        "needs-value": true
+                    },
+                    {
+                        "name": "with-mongodb-zstd",
+                        "description": "Enable zstd for compression (auto/yes/no)",
+                        "needs-value": true
+                    }
+                ],
+                "download-url-method": "pre-packaged-source"
+            },
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Andreas Braun",
+                    "email": "andreas.braun@mongodb.com"
+                },
+                {
+                    "name": "Jeremy Mikola",
+                    "email": "jmikola@gmail.com"
+                },
+                {
+                    "name": "Jérôme Tamarelle",
+                    "email": "jerome.tamarelle@mongodb.com"
+                }
+            ],
+            "description": "MongoDB driver extension",
+            "homepage": "https://jira.mongodb.org/browse/PHPC",
+            "keywords": [
+                "database",
+                "driver",
+                "mongodb",
+                "persistence"
+            ],
+            "support": {
+                "issues": "https://github.com/mongodb/mongo-php-driver/issues",
+                "source": "https://github.com/mongodb/mongo-php-driver/tree/2.1.8"
+            },
+            "install-path": "../mongodb/mongodb-extension"
+        }
+    ],
+    "dev": false,
+    "dev-package-names": []
+}

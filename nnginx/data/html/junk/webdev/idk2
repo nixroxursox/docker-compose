@@ -1,0 +1,40 @@
+50488574
+
+383.68
+
+173.80 - 124.80
+
+act - 8556547300
+8888307770
+
+8448981033
+dec 6 - 2019
+
+
+
+
+db.auth( "username" => "root", passwordPrompt() )
+
+
+db.auth( {
+   user: root,
+   pwd: passwordPrompt(),
+   digestPassword: false
+} )
+
+
+db.auth( {
+   user: root,
+   pwd: passwordPrompt(),
+   digestPassword: false
+} )
+db.auth ("root", passwordPrompt())
+
+
+
+db.users.insert(
+   {
+     _id: getNextSequence("userid"),
+     name: "user11"
+   }
+)

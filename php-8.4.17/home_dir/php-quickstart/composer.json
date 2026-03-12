@@ -1,0 +1,16 @@
+{
+    "name": "root/php-quickstart",
+    "autoload": {
+        "psr-4": {
+            "Root\\PhpQuickstart\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "me"
+        }
+    ],
+    "require": {
+        "mongodb/mongodb": "^2.1"
+    }
+}

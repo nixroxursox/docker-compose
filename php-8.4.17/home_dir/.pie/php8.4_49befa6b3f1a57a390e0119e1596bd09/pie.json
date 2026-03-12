@@ -1,0 +1,5 @@
+{
+    "require": {
+        "mongodb/mongodb-extension": "^2.1"
+    }
+}

@@ -1,0 +1,23 @@
+function getNextSequenceValue(sequenceName){
+
+   var sequenceDocument = db.counters.findAndModify({
+      query:{_id: sequenceName },
+      update: {$inc:{sequence_value:1}},
+      new:true
+   });
+
+   return sequenceDocument.sequence_value;
+}
+
+
+db.users.insert({
+   "_id":getNextSequenceValue("userid"),
+   "name":"user1",
+   "password":"crypto"
+})
+
+>db.users.insert({
+   "_id":getNextSequenceValue("userid"),
+   "name":"user2",
+   "public_key":"soon"
+})

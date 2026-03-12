@@ -1,0 +1,124 @@
+<?php $title = 'Login | '.$_SERVER['HTTP_HOST'] ?>
+<!DOCTYPE html>
+<!--[if IE 9]>
+<html class="lt-ie10" lang="en"> <![endif]-->
+<html lang="en">
+<title><?php if (isset($title)): ?> <?= $title ?> <?php else: ?>
+    <?php  echo $_SERVER['HTTP_HOST']; ?> <?php endif ?>
+</title>
+<head>
+    <meta charset="UTF-8">
+    <meta content="Freedom of expression Bazaar" name="description">
+    <meta content="weed" name="keywords">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="http://localhost/css/normalize.css" rel="stylesheet"
+          type="text/css">
+    <link href="http://localhost/fa/css/all.css" rel="stylesheet"
+          type="text/css">
+    <link href="http://localhost/css/w3.css" rel="stylesheet"
+          type="text/css">
+    <link href="http://localhost/css/website.css" rel="stylesheet"
+          type="text/css">
+
+    <style type="text/css">
+
+		.nav-parent {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(1, 1fr);
+			grid-column-gap: 0px;
+			grid-row-gap: 0px;
+		}
+
+
+        #section-login {
+			align-content: center;
+		}
+        #section-navbar {
+            color: #670000;
+        }
+        #section-captcha    {
+            height: 144px;
+            width: 144px;
+        }
+		.navbar-styled	{
+			width: 90%;
+			align: center;
+		}
+    </style>
+</head>
+<body>
+<? if(isset($error)): ?>
+<div class="alert-box alert" data-alert>
+    <?=$this->e($error) ?>
+</div>
+<? endif ?>
+<? if($this->fl('success')): ?>
+<div class="alert-box success" data-alert>
+    <?=$this->fl('success') ?>
+</div>
+<? endif ?>
+	<header>
+
+<section class="w3-section">
+		<div class="nav-parent" id="topnav">
+				<div class="w3-col">
+						 <div class="search">
+						 <input class="searchTerm" placeholder="What are you looking for?" type="text">
+						 <button class="searchButton" type="submit">
+							 <i class="fa fa-search"></i>
+						 </button>
+					 </div>
+				</div>
+				<div class="w3-col navbar-item2">?>
+					<div class="dropdown w3-bg-light">
+						<li <?php $this->controller == 'listings' ? ' class="active"' : ''?>>
+								<a href="?c=listings">Listings</a>
+						</li>
+						<li class="divider"></li>
+						<div class="dropdown-content">
+							<a href="?c=orders&a=index">Current Orders</a>
+							<a href="?c=orders&a=history">Order History</a>
+						</div>
+					</div>
+					<div class="dropdown w3-bg-light">
+						<li  <?php $this->controller == 'orders' ? ' class="active"' : ''?>>
+								<a href="?c=orders">Orders</a>
+						</li>
+						<li class="divider"></li>
+							<a href="?c=orders&a=index">PGP Key</a>
+							<a href="?c=orders&a=history">Password and PIN</a>
+							<a href="?c=orders&a=history">MultiSig!</a>
+						</div>
+					</div>
+					<div class="dropdown w3-bg-light">
+						<button class="dropbtn fab">Support</button>
+						<div class="dropdown-content">
+							<a href="?c=orders&a=index">Open A Case</a>
+							<a href="?c=orders&a=history">My Tickets</a>
+							<a href="?c=orders&a=history">Support History</a>
+						</div>
+					</div>
+					<div class="dropdown w3-bg-light">
+						<button class="dropbtn fab">Coins</button>
+						<div class="dropdown-content">
+							<a href="?c=orders&a=index">Balance</a>
+							<a href="?c=orders&a=history">My Altcoins</a>
+							<a href="?c=orders&a=history">Configure History</a>
+						</div>
+					</div>
+					<div class="dropdown w3-bg-light">
+						<button class="dropbtn fab">Messaging</button>
+						<div class="dropdown-content">
+							<a href="?c=orders&a=index">Messages</a>
+							<a href="?c=orders&a=history">Live! chat</a>
+							<a href="?c=orders&a=history">Archived</a>
+						</div>
+					</div>
+		</div>
+</section>
+	</header>
+
+
+</body>
+</html>

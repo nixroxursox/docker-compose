@@ -1,0 +1,89 @@
+<div class="topnav" id="myTopnav w3-container">
+  <a href="?c=listings" class="active">Home/Search</a>
+  <div class="topnav-right">
+<div class="dropdown">
+<button class="dropbtn">Orders
+<i class="fas fa-caret-down"></i>
+</button>
+<div class="dropdown-content">
+<a href="?c=orders&a=index">Current Orders</a>
+<a href="?c=orders&a=history">Order History</a>
+</div>
+</div>
+<div class="dropdown">
+<button class="dropbtn">My Profile
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-content">
+<a href="?c=orders&a=index">PGP Key</a>
+<a href="?c=orders&a=history">Password and PIN</a>
+<a href="?c=orders&a=history">MultiSig!</a>
+</div>
+</div>
+<div class="dropdown">
+<button class="dropbtn">Support
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-content">
+<a href="?c=orders&a=index">Open A Case</a>
+<a href="?c=orders&a=history">My Tickets</a>
+<a href="?c=orders&a=history">Support History</a>
+</div>
+</div>
+<div class="dropdown">
+<button class="dropbtn">Messages
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-content">
+<a href="?c=orders&a=index">Mail</a>
+</div>
+</div>
+
+<a href="?c=users&a=settings">Vendor Account</a>
+<div class="dropdown">
+<button class="dropbtn">Coins
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-content">
+<a href="#">Orders</a>
+<a href="#">Pending</a>
+<a href="#">My Wallet</a>
+</div>
+</div>
+
+<a href="#search">Search</a>
+<a href="#about">About</a>
+</div>
+</div>
+<div id="id01" class="modal w3-container">
+
+<form class="modal-content animate" action="http://localhost/index.php?c=users&a=doLogin" method="post">
+<div class="imgcontainer">
+<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+<img src="http://localhost/index.php?c=users&a=captcha" alt="Avatar" class="avatar">
+</div>
+
+<div class="w3-container">
+<label for="name"><b>Username</b></label>
+<input type="text" placeholder="Enter Username" name="name" required>
+
+<label for="password"><b>Password</b></label>
+    <label>
+        <input type="password" placeholder="Enter Password" name="password" required>
+    </label>
+
+    <label for="captcha_code"><b>Captcha</b></label>
+<input type="text" placeholder="Enter Username" name="captcha_code" required>
+
+<button type="submit">Login</button>
+<label>
+ <input type="checkbox" checked="checked" name="remember"> Remember me
+</label>
+</div>
+
+<div class="w3-container" style="background-color:#f1f1f1">
+<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+<span class="psw">Forgot <a href="#">password?</a></span>
+</div>
+</form>
+</div>

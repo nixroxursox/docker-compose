@@ -1,0 +1,220 @@
+.center {
+  margin: auto;
+  width: 80%;
+  padding: 0px;
+}
+
+  .body {
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      font-size: 14px;
+      margin: 20px;
+      display: inline;
+  }
+  .body:focus {
+      outline: 3px;
+      outline-color: #670000;
+  }
+  .form {
+      border: 1px solid #FFFFFF;
+      outline: 3px #670000;
+      padding: 6px;
+  }
+  * {
+      box-sizing: border-box;
+  }
+	.w3-bg-dark	{
+		background-color: #670000;
+		color: #FFFFFF;
+	}
+	.w3-bg-Light	{
+		background-color: #FFFFFF;
+		color: #670000;
+	}
+
+	#borders	{
+		border: 3px solid #670000;
+		outline-color: #670000;
+		border-color: #000000;
+	}
+  /* Set a style for all buttons */
+  .input[type=text], .input[type=password], .input[type=captcha] {
+      width: 100%;
+      padding: 4px 6px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 2px solid #ffffff;
+      outline: 1px inherit;
+      bottom ;
+      box-sizing: border-box;
+      color: #670000;
+      background-color: #FFFFFF;
+  }
+/*Resize the wrap to see the search bar change!*/
+
+  .wrap{
+      width: 30%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+	.row	{
+		display: inline-grid;
+		width: 100%;
+		border: 1px dotted  #670000;
+	}
+	.row-type {
+		padding-top: 12px;
+		display: inline-grid;
+		width: 95%;
+		height: 30px;
+		border: 0px solid  #ffffff;
+	}
+	.col	{
+		width: 100%;
+		align-content: : center;
+		border: 1px solid #670000;
+	}
+	.img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+
+
+  #section-captcha    {
+      height: 144px;
+      width: 144px;
+  }
+  #footer {
+
+        width: 100%;
+        border 1px solid #670000;
+    }
+
+  .captcha-img {
+      line-height: 60;
+      display: inline-block;
+      border: solid 1px white;
+      max-width: 100%;
+      margin-bottom:10px;
+  }
+  input.captcha {
+      height: 58px;
+  }
+
+  .grid-container {
+      display: inline-grid;
+      grid-template-columns: 200px / auto auto auto auto;
+      grid-template-rows: 800px/auto;
+      grid-auto-columns: auto;
+      grid-gap: 10px;
+      background-color: #670000;
+      padding: 10px;
+  }
+	ul {
+    width: 100%;
+	  list-style-type: none;
+	  margin: 0;
+	  padding: 0;
+	  overflow: hidden;
+	  background-color: #333;
+	}
+
+	li {
+	  float: left;
+	}
+
+	li a, .dropbtn {
+	  display: inline-block;
+	  color: white;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	}
+
+	li a:hover, .dropdown:hover .dropbtn {
+	  background-color: red;
+	}
+
+	li.dropdown {
+	  display: inline-block;
+	}
+
+	.dropdown-content {
+	  display: none;
+	  position: absolute;
+	  background-color: #f9f9f9;
+	  min-width: 160px;
+	  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	  z-index: 1;
+	}
+
+	.dropdown-content a {
+	  color: black;
+	  padding: 12px 16px;
+	  text-decoration: none;
+	  display: block;
+	  text-align: left;
+	}
+
+	.dropdown-content a:hover {background-color: #f1f1f1;}
+
+	.dropdown:hover .dropdown-content {
+	  display: block;
+	}
+  .grid-container {
+      display: inline-grid;
+      grid-template-columns: 200px / auto auto auto auto;
+      grid-template-rows: 800px/auto;
+      grid-auto-columns: auto;
+      grid-gap: 10px;
+      background-color: #670000;
+      padding: 10px;
+  }
+
+  .grid-container > div {
+      display: inline-block;
+      background-color: #670000;
+      color: #FFFFFF;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 20px;
+      border: solid  1px #FFFFFF;
+  }
+
+  .button {
+      background-color: #FFFFFF;
+      color: #670000;
+      padding: 6px 10px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 50%;
+  }
+
+  #login-item {
+      background-color: #670000;
+      border: #ffffff;
+      padding: 5px;
+      font-size: 20px;
+      color: white;
+      text-align: center;
+      width: 90%;
+  }
+  /* Full-width inputs */
+  input.captcha {
+      height: 58px;
+  }
+
+  .captcha-img {
+      display: block;
+      border: solid 1px white;
+      text-align: center;
+      align-content: center;
+      width: 100%;
+  }
+  input.captcha {
+      height: 58px;
+  }

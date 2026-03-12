@@ -1,0 +1,67 @@
+{
+  "_id": {
+    "$oid": "6853a3c23e11b064639af09e"
+  },
+  "customer_id": {
+    "cid": "a506e3db-8cd1-47bb-ad87-5ef80b6b0044",
+    "created_at": {
+      "$date": "2025-06-19T05:35:16.418Z"
+    }
+  },
+  "login_data": {
+    "username": "rjallen",
+    "password": {
+      "$binary": {
+        "base64": "JGFyZ29uMmlkJHY9MTkkbT02NTUzNix0PTIscD0xJDFpVnV4QmVWbW42OFZFSWV2c2xXQlEkNlpGSGd2OTc2VThhV1FtLytkT0JPa05RZFRVazl2YTA4czl6NnYxUDdYRQ==",
+        "subType": "00"
+      }
+    },
+    "email_address": "rocky.j.allen@gmail.com",
+    "is_admin_user": false,
+    "acct_activated": true
+  },
+  "personal_info": {
+    "given_name": "Rocky",
+    "family_name": "Allen",
+    "billing_address": {
+      "address_line_1": "",
+      "addl2": "",
+      "locality": "",
+      "State": "",
+      "postal_code": "",
+      "country": ""
+    },
+    "shipping_address": {
+      "address_line_1": "",
+      "addl2": "",
+      "locality": "",
+      "State": "",
+      "postal_code": "",
+      "country": ""
+    },
+    "phone_number": "9192251665"
+  },
+  "last_updated": {
+    "$date": "2025-06-19T05:35:16.418Z"
+  },
+  "update_history": {
+    "last_updated": {
+      "$date": "2025-06-19T05:35:16.418Z"
+    },
+    "updated_by": "system",
+    "update_reason": "initial creation",
+    "updated_at": {
+      "$date": "2025-06-19T05:35:16.418Z"
+    }
+  },
+  "notes": {
+    "note": "note to check validity",
+    "welcome_email": "",
+    "reg_id": ""
+  },
+  "preferences": {
+    "email_unsubscribed": false,
+    "session_length": 600
+  },
+  "reference_id": ""
+}

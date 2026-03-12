@@ -1,0 +1,21 @@
+, MYSQL_ROOT_HOST, MYSQL_DATABASE, MYSQL_USER, and MYSQL_PASSWORD.
+
+
+
+docker run -v /Users/rj/repo/mysql:/etc/mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD='R0flSt0mp3d' -e MYSQL_DATABASE=BCMART -e MYSQL_USER=bcuser, and MYSQL_PASSWORD='R0flSt0mp3d' --rm -ti itsnix/mariadb:10.4.9 /bin/mysql
+
+
+
+<?php
+/* Connect to a MySQL database using driver invocation */
+$dsn = 'mysql:dbname=BCMART;host=127.0.0.1';
+$user = 'dbuser';
+$password = 'dbpass';
+
+try {
+    $dbh = new PDO($dsn, $user, $password);
+} catch (PDOException $e) {
+    echo 'Connection failed: ' . $e->getMessage();
+}
+
+?>

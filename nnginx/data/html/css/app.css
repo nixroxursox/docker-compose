@@ -1,0 +1,210 @@
+/* topbar height */
+.fixed.expanded:not(.w3-topbar) .w3-topbar-section { margin-top: 60px; }
+.w3-topbar { height: 60px; line-height: 60px; width: 800px; }
+.w3-topbar .name { height: 60px; }
+.w3-topbar .name h1 { line-height: 60px; }
+.w3-topbar .toggle-topbar a { height: 60px; line-height: 60px; }
+.w3-topbar-section li:not(.has-form) a:not(.button) { line-height:60px; }
+.w3-topbar-section li.active:not(.has-form) a:not(.button) { line-height:60px; }
+.w3-topbar-section .has-dropdown > a:after {top:30px;}
+.w3-topbar-section .dropdown li a { line-height:60px; }
+.w3-topbar-section > ul > .divider, .w3-topbar-section > ul > [role="separator"] { height: 60px; }
+.w3-topbar-section .has-form { padding: 0 20px; height: 60px; }
+
+.w3-topbar .name h1 a { padding: 0 20px; }
+.w3-topbar .toggle-topbar a { padding: 0 20px; }
+.w3-topbar .toggle-topbar.menu-icon a { padding: 0 45px 0 20px; }
+.w3-topbar-section ul li > a { padding-left:20px; }
+.w3-topbar-section ul li > a.button { padding-right: 20px; padding-left: 20px; }
+.w3-topbar-section ul li > button { padding-right: 20px; padding-left: 20px; }
+.w3-topbar-section .has-form { padding: 20px; }
+.w3-topbar-section .has-dropdown > a:after { margin-right: 20px; }
+.w3-topbar-section .dropdown li a { padding: 8px 20px; }
+.w3-topbar-section .dropdown li.has-form { padding: 8px 20px; }
+.w3-topbar-section .dropdown label { padding: 8px 20px 2px; }
+.w3-topbar-section li:not(.has-form) a:not(.button) { padding: 0 20px; }
+.w3-topbar-section li.active:not(.has-form) a:not(.button) { padding: 0 20px; }
+
+/* vertical align of logout button */
+.button.logout {
+    margin-top: -10px;
+}
+
+/* restore correct position of dropdown arrows */
+.w3-topbar-section .has-dropdown .dropdown li.has-dropdown > a:after {
+    top:1.35rem;
+}
+
+/* logo styling */
+.w3-topbar .name h1 a i.fi-bitcoin {
+    font-size:3rem;
+    color:#670000;
+}
+
+.w3-topbar .name h1 a span.title {
+    letter-spacing:-1px;
+    font-size:1.3em;
+    position: relative;
+    top: -8px;
+    left: 7px;
+}
+
+.w3-topbar .name h1 a span.title span.first {
+    color:#670000;
+}
+
+.row.body {
+    padding-top:1rem;
+}
+
+.panel.callout {
+    border-color:#FFFFFF;
+    background:##670000;
+}
+
+hr {c
+    margin-top:0.5rem;
+}
+
+#login-logo-wrapper {
+    text-align:center;
+}
+#login-logo-wrapper i.fi-bitcoin {
+    font-size:30rem;
+    color:#670000;
+    line-height: 12rem;
+
+}
+
+/* custom colors for active tabs in top bar */
+.w3-topbar-section li.active:not(.has-form) a:not(.button) {
+    background-color: #FFFFFF;
+}
+
+.w3-topbar-section li.active:not(.has-form) a:not(.button):hover {
+    background-color: #670000;
+}
+
+/* show currently logged in user in top bar */
+.account-label {
+    position: relative;
+    top: 20px;
+    right: 10px;
+    min-width: 4rem;
+    max-width: 10rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* buttons can be used in tables */
+table input.button, table a.button {
+    margin-bottom:0;
+}
+
+.label.#670000 {
+    background-color: #670000;
+}
+
+.label.light {
+    background-color: #ffffff;
+    color: ##670000;
+}
+
+/* custom color for switches */
+.switch input:checked + label {
+    background-color:#670000;
+}
+
+table.full-width {
+    width:100%;
+}
+
+h6.price {
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+div.thumbnail {
+    border: 1px solid #ffffff;
+    display: inline-block;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.0);
+    transition: all 200ms ease-out;
+    margin-bottom:1rem;
+}
+div.thumbnail:hover {
+    box-shadow: 0 0 6px 1px rgba(255, 165, 0, 0.6);
+}
+
+div.thumbnail .panel {
+    margin-bottom:0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border:none;
+}
+
+div.thumbnail img {
+    /* fixes wrong resizing in firefox */
+    width:100%;
+}
+
+.row .row.content {
+    #margin-left: -0.3375rem;
+    #margin-right:0;
+    width: 100%
+}
+
+img.product-image {
+
+    border: 1px solid  #670000     ;
+    margin-top:15px;
+    margin-bottom:15px;
+}
+
+div.product-description {
+    padding-top:10px;
+}
+
+.row.order {
+    margin-top:5px;
+}
+.row.order label.right {
+    font-size: 1rem;
+    color:#670000;
+}
+
+.bitcoin-value {
+    font-size:smaller;
+    display:block;
+    word-break:break-all;
+    word-wrap: break-word;
+}
+
+pre {
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    font-weight: normal;
+    #color: #670000;
+    color: #ffffff;
+    background-color: #670000;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ffffff;
+    padding: 0.125rem 0.3125rem 0.0625rem;
+}
+
+/* make lists in alert boxes as small as normal text */
+.alert-box ol {
+    font-size: 0.8125rem
+}
+
+.captcha-img {
+    line-height: 68;
+    display: inline-block;
+    border: solid 1px #57595D;
+    max-width: 100%;
+    margin-bottom:10px;
+    margin-top: 2px;
+}
+input.captcha {
+    height: 58px;
+}

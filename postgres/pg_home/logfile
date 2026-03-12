@@ -1,0 +1,6 @@
+2026-01-02 17:54:40.370 UTC [36] LOG:  starting PostgreSQL 18.1 (Debian 18.1-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2026-01-02 17:54:40.372 UTC [36] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2026-01-02 17:54:40.372 UTC [36] LOG:  listening on IPv6 address "::", port 5432
+2026-01-02 17:54:40.377 UTC [36] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-01-02 17:54:40.387 UTC [42] LOG:  database system was shut down at 2026-01-02 17:54:01 UTC
+2026-01-02 17:54:40.393 UTC [36] LOG:  database system is ready to accept connections

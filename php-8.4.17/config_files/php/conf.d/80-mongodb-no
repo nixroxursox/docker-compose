@@ -1,0 +1,4 @@
+
+; PIE automatically added this to enable the mongodb/mongodb-extension extension
+; priority=80
+extension=mongodb

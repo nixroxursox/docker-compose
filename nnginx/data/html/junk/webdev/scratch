@@ -1,0 +1,63 @@
+<div class="w3-container" id="testing">
+		 <div class="w3-row" id="testing">
+			 <div class="w3-col style="width:150px" id="testing"></div>
+			 <div id="sides">
+				 <div class="topnav w3-bg-dark" id="left">
+					 <a href="?c=listings" class="active">Home</a>
+						 <div class="dropdown w3-bg-light">
+							 <button class="dropbtn"></button>
+								 <div class="dropdown-content">
+									<a href="?c=orders&a=index">Current Orders</a>
+									<a href="?c=orders&a=history">Order History</a>
+								 </div>
+						 </div>
+												<div class="dropdown w3-bg-light">
+												<button class="dropbtn">My Profile</button>
+												<div class="dropdown-content">
+												<a href="?c=orders&a=index">PGP Key</a>
+												<a href="?c=orders&a=history">Password and PIN</a>
+												<a href="?c=orders&a=history">MultiSig!</a>
+												</div>
+												</div>
+												<div class="dropdown w3-bg-light">
+												<button class="dropbtn">Support</button>
+												<div class="dropdown-content">
+
+												<a href="?c=orders&a=index">Open A Case</a>
+												<a href="?c=orders&a=history">My Tickets</a>
+												<a href="?c=orders&a=history">Support History</a>
+												</div>
+												</div>
+												<div class="dropdown">
+												<button class="dropbtn">Messages</button>
+												<div class="dropdown-content">
+												<a href="?c=orders&a=index">Mail</a>
+												</div>
+												</div>
+												<a href="?c=users&a=settings">Vendor Account</a>
+											</div>
+				 </div>
+			 </div>
+						<div class="dropdown class="w3-container w3-bg-dark" id="login">
+						<div class="w3-col rest">1</div>
+
+					<div class="w3-row">2</div>
+					<div class="dropdown class="w3-container w3-bg-dark" id="login">
+		 <div class="grid-item"> <div class="login-container w3-panel">
+													 <form action="/action_page.php">
+													 <input type="text" placeholder="Username" name="username">
+												 <input type="text" placeholder="Password" name="psw">
+												 <button class="w3-bg-dark" type="submit">Login</button>
+											 </form></div>
+			 <div class="grid-item"></div>
+				 <div class="grid-item">5</div>
+					 <div class="grid-item">6</div>
+						 <div class="grid-item">7</div>
+							 <div class="grid-item">8</div>
+								 <div class="grid-item">9</div>
+									 <div class="grid-item">10</div>
+										 <div class="grid-item">11</div>
+											 <div class="grid-item">12</div>
+</div>
+
+<?php $content ?>

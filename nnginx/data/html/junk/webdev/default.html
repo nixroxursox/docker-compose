@@ -1,0 +1,263 @@
+<?php ?>
+<html>
+<head>
+  <title>
+      <?php if (isset($title)): ?>
+          <?= $title ?>
+      <?php else: ?>
+         <?php  echo $_SERVER['HTTP_HOST']; ?>
+      <?php endif ?>
+  </title>
+
+  <style>
+
+    .pagination-circular li.current {
+      border: 1px solid #1779ba;
+      border-radius: 5000px;
+      padding: 0.285em 0.8em;
+      font-size: 18px;
+    }
+
+    .pagination-circular li.disabled {
+      border: 1px solid #cacaca;
+      padding: 0.285em 0.8em;
+      border-radius: 5000px;
+      font-size: 18px;
+    }
+
+    .pagination-circular a {
+      border-radius: 5000px;
+      padding: 0.285em 0.8em;
+      border: 1px solid #1779ba;
+      font-size: 18px;
+    }
+
+    .pagination-circular li:not(.disabled):hover a {
+      background: #1779ba;
+      color: #fefefe;
+    }
+
+    .pagination-circular li a {
+      transition: background 0.15s ease-in, color 0.15s ease-in;
+    }
+
+
+
+<!-- divide -->
+
+.foundation-5-top-bar {
+  background: #333;
+  color: #fefefe;
+}
+
+.foundation-5-top-bar .menu {
+  background: #333;
+}
+
+.foundation-5-top-bar .menu a {
+  color: #fefefe;
+}
+
+.foundation-5-top-bar .is-dropdown-submenu {
+  border: 0;
+}
+
+.foundation-5-top-bar .is-dropdown-submenu-item.opens-right a::after {
+  border-color: transparent transparent transparent #fefefe;
+}
+
+.foundation-5-top-bar .js-drilldown-back > a::before {
+  border-color: transparent #fefefe transparent transparent;
+}
+
+.foundation-5-top-bar .is-drilldown-submenu-parent > a::after {
+  border-color: transparent transparent transparent #fefefe;
+}
+
+.foundation-5-top-bar .dropdown.menu.medium-horizontal > li.is-dropdown-submenu-parent > a::after {
+  border-color: #fefefe transparent transparent;
+}
+
+</style>
+  <style>
+  $menu-hover-lines-transition: all 0.35s ease;
+  $menu-hover-lines-border-width: 3px;
+
+  .menu-hover-lines {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: $menu-hover-lines-transition;
+
+    li a {
+      padding: 0.75rem 0;
+      color: rgba($body-font-color, 0.5);
+      position: relative;
+      margin-left: 1rem;
+    }
+
+    li:first-child a {
+      margin-left: 0;
+    }
+
+    li.active > a {
+      background-color: transparent;
+    }
+
+    a:before,
+    a::after {
+      height: $menu-hover-lines-border-width;
+      position: absolute;
+      content: '';
+      transition: $menu-hover-lines-transition;
+      background-color: $primary-color;
+      width: 0;
+    }
+
+    a::before {
+      top: 0;
+      left: 0;
+    }
+
+    a::after {
+      bottom: 0;
+      right: 0;
+    }
+
+    a:hover,
+    li.active > a {
+      color: $body-font-color;
+      transition: $menu-hover-lines-transition;
+    }
+
+    a:hover::before,
+    .active a::before,
+    a:hover::after,
+    .active a::after {
+      width: 100%;
+    }
+    $foundation-5-top-bar-bg: #333;
+$foundation-5-top-bar-text-color: $white;
+
+.foundation-5-top-bar {
+  background: $foundation-5-top-bar-bg;
+  color: $foundation-5-top-bar-text-color;
+
+  .menu {
+    background: $foundation-5-top-bar-bg;
+
+    a {
+      color: $foundation-5-top-bar-text-color;
+    }
+  }
+
+  .is-dropdown-submenu {
+    border: 0;
+  }
+
+  .is-dropdown-submenu-item.opens-right a::after {
+    border-color: transparent transparent transparent $foundation-5-top-bar-text-color;
+  }
+
+  .js-drilldown-back > a::before {
+    border-color: transparent $foundation-5-top-bar-text-color transparent transparent;
+  }
+
+  .is-drilldown-submenu-parent > a::after {
+    border-color: transparent transparent transparent $foundation-5-top-bar-text-color;
+  }
+
+  .dropdown.menu.medium-horizontal > li.is-dropdown-submenu-parent > a::after {
+    border-color: $foundation-5-top-bar-text-color transparent transparent;
+  }
+}
+
+</style>
+<style>
+$card-user-container-margin-bottom: 1rem;
+$card-user-container-radius: $global-radius;
+$card-user-container-background: $white;
+$card-user-container-color: $black;
+$card-user-container-image-size: rem-calc(190);
+
+.card-user-container {
+  margin-bottom: $card-user-container-margin-bottom;
+  background-color: $card-user-container-background;
+  color: $black;
+  overflow: hidden;
+  padding: 0;
+
+  </stlye>
+
+</head>
+<body>
+<section>
+  <div class="top-bar foundation-5-top-bar">
+    <div class="top-bar-title">
+      <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+        <button class="menu-icon" type="button" data-toggle></button>
+      </span>
+      <strong>Site Title</strong>
+    </div>
+    <div id="responsive-menu">
+      <div class="top-bar-left">
+        <ul class="dropdown vertical medium-horizontal menu" data-responsive-menu="drilldown medium-dropdown" data-auto-height="true" data-animate-height="true">
+          <li>
+            <a href="#">One</a>
+            <ul class="menu">
+              <li><a href="#">One</a></li>
+              <li><a href="#">Two</a></li>
+              <li>
+                <a href="#">Three</a>
+                <ul class="menu">
+                  <li><a href="#">One</a></li>
+                  <li><a href="#">Two</a></li>
+                  <li>
+                    <a href="#">Three</a>
+                    <ul class="menu">
+                      <li><a href="#">One</a></li>
+                      <li><a href="#">Two</a></li>
+                      <li><a href="#">Three</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#">Two</a></li>
+          <li><a href="#">Three</a></li>
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu">
+          <li><input type="search" placeholder="Search"></li>
+          <li><button type="button" class="button">Search</button></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+<div>content</div>
+</section>
+</body>
+
+<footer>
+
+
+
+<ul class="pagination-pointed pagination text-center" role="navigation" aria-label="Pagination">
+  <li class="pagination-previous disabled">Previous <span class="show-for-sr">page</span></li>
+  <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
+  <li><a class="pagination-pointed-button" href="#" aria-label="Page 2">2</a></li>
+  <li><a class="pagination-pointed-button" href="#" aria-label="Page 3">3</a></li>
+  <li><a class="pagination-pointed-button" href="#" aria-label="Page 4">4</a></li>
+  <li class="ellipsis" aria-hidden="true"></li>
+  <li><a class="pagination-pointed-button" href="#" aria-label="Page 12">12</a></li>
+  <li><a class="pagination-pointed-button" href="#" aria-label="Page 13">13</a></li>
+  <li class="pagination-next"><a class="pagination-pointed-button" href="#" aria-label="Next page">Next <span class="show-for-sr">page</span></a></li>
+</ul>
+
+
+</footer>

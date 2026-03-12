@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"name": "sitelogin",
+			"path": "../../gitrepos/python-code/sitelogin"
+		},
+		{
+			"name": "gcpay",
+			"path": "../../gitrepos/python-code/gcpay"
+		},
+		{
+			"name": "Flutter-Multivendor-Mobile-app-for-WooCommerce",
+			"path": "../../gitrepos/Flutter-Multivendor-Mobile-app-for-WooCommerce"
+		},
+		{
+			"name": "ecom",
+			"path": ".."
+		}
+	],
+	"settings": {}
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html lang="en" >
+<title>
+    <?php if (isset($title)): ?>
+        <?= $title ?>
+    <?php else: ?>
+       <?php  echo $_SERVER['HTTP_HOST']; ?>
+    <?php endif ?>
+</title>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="description" content="Freedom of expression Bazaar">
+      <meta name="keywords" content="weed">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="http://localhost/webdev/css/fontawesome.min.css">
+      <!--link rel="stylesheet" type="text/css" href="http://localhost/webdev/css/w3.css" -->
+      <link rel="stylesheet" type="text/css" href="http://localhost/webdev/css/site.css">
+      <style>
+      </style>
+   </head>
+     <body>
+       <div class="topnav" id="myTopnav">
+         <a href="?c=listings" class="active">Home/Search</a>
+         <div class="topnav-right">
+  <div class="dropdown">
+    <button class="dropbtn">Orders
+      <i class="fas fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="?c=orders&a=index">Current Orders</a>
+      <a href="?c=orders&a=history">Order History</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">My Profile
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="?c=orders&a=index">PGP Key</a>
+      <a href="?c=orders&a=history">Password and PIN</a>
+      <a href="?c=orders&a=history">MultiSig!</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Support
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="?c=orders&a=index">Open A Case</a>
+      <a href="?c=orders&a=history">My Tickets</a>
+      <a href="?c=orders&a=history">Support History</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Messages
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="?c=orders&a=index">Mail</a>
+    </div>
+  </div>
+
+  <a href="?c=users&a=settings">Vendor Account</a>
+  <div class="dropdown">
+    <button class="dropbtn">Coins
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Orders</a>
+      <a href="#">Pending</a>
+      <a href="#">My Wallet</a>
+    </div>
+  </div>
+
+    <a href="#search">Search</a>
+    <a href="#about">About</a>
+  </div>
+</div>
+
+<?php $content ?>
+
+     </body>
+       <footer>
+      </footer>
+      </html>
