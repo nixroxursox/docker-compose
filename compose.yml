@@ -33,7 +33,7 @@ services:
         target: /tmp
 
   php:
-    image: quay.io/nixroxursox/php:2.6
+    image: quay.io/nixroxursox/php:2.7
     user: phpUser:phpUser
     command: php-fpm
     environment:
@@ -47,7 +47,7 @@ services:
       # Then PHPStorm will use the corresponding path mappings
       PHP_IDE_CONFIG: serverName=php
     networks:
-      ecommnet:
+      ecommnet: 
         ipv4_address: 10.89.7.3
     ports:
       - 9003:9003

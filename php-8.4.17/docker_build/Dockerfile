@@ -323,7 +323,8 @@ RUN set eux; \
 	libbson-dev \
 	libcrypt-dev \
 	libmongoc-dev \
-	default-mysql-client
+	default-mysql-client \
+	gh
 
 
 COPY composer_install.sh /var/www/html/New_Ecom_Mvc/
@@ -331,6 +332,12 @@ RUN set -eux;\
     cd /var/www/html/New_Ecom_Mvc/ \ 
 	&& ./composer_install.sh \ 
 	&& mv composer.phar /usr/bin/composer
+
+RUN set eux; \
+curl -fL --output /tmp/pie.phar https://github.com/php/pie/releases/latest/download/pie.phar \
+#&& gh attestation verify --owner phpUser /tmp/pie.phar \
+&& sudo mv /tmp/pie.phar /usr/local/bin/pie \
+&& sudo chmod +x /usr/local/bin/pie
 
 STOPSIGNAL SIGQUIT
 

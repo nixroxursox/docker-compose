@@ -1,153 +1,3 @@
-6 7           6jppppmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[..............................
-php 
-php index.php 
-php index.php 
-evi /var/www/html/gcpay_mvc/web/app/lib/app.php 
-vi /var/www/html/gcpay_mvc/web/app/lib/app.php 
-vi /var/www/html/gcpay_mvc/web/app/lib/app.php 
-vi /var/www/html/gcpay_mvc/web/app/lib/app.php 
-vi /var/www/html/gcpay_mvc/web/app/lib/app.php 
-vi /var/www/html/gcpay_mvc/web/app/lib/app.php
-vi /var/www/html/gcpay_mvc/web/app/lib/app.php
-vi ../app/controller/error.php
-vi ../app/controller/m-users.php 
-ls -a 
-cd newsite/
-ls -la 
-cat index.html 
-ls -al 
-ls -la 
-cd ..
-ls -la 
-cat testregister.php 
-ls -laq 
-cat test4.php 
-ls -la 
-cat index.php 
-cd ../ap
-cd ../app/
-ls -la 
-rm -rf .DS_Store 
-ls -a 
-cd lli
-cd lib/
-l -la 
-ls -la 
-composer sho 
-composer update 
-composer update -W
-composer upgrade mongodb/mongodb 
-composer upgrade mongodb/mongodb 
-vi composer.json 
-ls -la 
-cd ../../
-cd ..
-ls -la 
-composer show 
-mkdir web/app/lib/old_composer
-mv web/app/lib/composer.* web/app/lib/old_composer/
-cp -R composer.* web/app/lib/
-cd web/app/lib/
-ls -a 
-composer update 
-composer dump-autoload 
-cat composer.json 
-ls -la 
-cat app.php 
-ls -la 
-ls -la vendor/autoload.php 
-cd ../../public
-ls -la 
-php index.php 
-vi index.php 
-ls -la 
-cd fa
-ls -la 
-cd ..
-ls -la 
-cat test2.html 
-ls -lqa 
-php sodium.php 
-act sodium.php 
-cat sodium.php 
-ls -al 
-cd ../app/lib/
-composer require odium
-composer require odium
-composer lit
-composer ssuggest
-composer suggest
-ls -la
-php ../../public/sodium.php 
-ls -la 
-mysql 
-mysql -S /tmp/mysqld.sock
-mysql -u app_Admin -p -S /tmp/mysqld.sock
-mysql -u root -p -S /tmp/mysqld.sock
-sudo apt-get update 
-sudp apt-get install -y --no-install-recommends less
-sudo apt-get install -y --no-install-recommends less
-mysql -u root -p -S /tmp/mysqld.sock
-clear
-ls -al 
-vi mongoapp.php 
-vi mongoapp.php 
-myql -u root -p -S /tmp/mysqld.sock
-mysql -u root -p -S /tmp/mysqld.sock
-cd web/
-ls -la 
-cd web/app/
-cd 
-cd certs/
-ls -la 
-ls -la  public/index.php 
-cd public/
-ls -la 
-cat info.php in
-cat info.php 
-cd web/app/lib/
-composerpdate 
-composer update 
-composer show
-php app.php 
-vi app.php 
-cat mongoapp.php 
-cd web/app/
-cd lib/
-php --help
-php -e mongoapp.php `
-php  mongoapp.php `
-php  mongoapp.php
-php -e  mongoapp.php
-0
-php mongoapp.php 
-ls la
-ls -la  
-file app.php 
-getfacl app.php 
-sudo getfacl 
-sudo apt-get update 
-sudo apt-get install -y --no-install-recommends getfacl
-sudo apt search getfacl
-cd web/app/
-pwd
-ls -latr /var/www/html/gcpay_mvc/web/app
-ls -ld //var/www/html/gcpay_mvc/web/app
-chmod 0664 //var/www/html/gcpay_mvc/web/app
-ls -la //var/www/html/gcpay_mvc/web/app
-ls -la /var/www/html/gcpay_mvc/web/app
-sudo ;s /var/www/html/gcpay_mvc/web/app
-                                                                           ls  -la 
-ls -la 
-ls -la 
-sudo chown 101:101 .
-ls -la
-cd ..
-ls -la 
-chmod 0775 app/
-cd app/
-ls -la 
-cd lib/
 ls -la 
 php app.php 
 php mongoapp.php 
@@ -498,3 +348,153 @@ ls -la
 composer dump-autoload
 ls -la 
 cat app.php 
+ls -la 
+cd ../app/
+ls -la 
+cd lib/
+ls -la 
+ls -la 
+cat controller.php 
+ls -la 
+pwd
+cat app.php 
+php tr1.php 
+cd ../
+;s =;a 
+ls -la 
+cd lib/
+ls -la 
+cd certs/
+ls -la 
+cd ..
+php tr1.php 
+php --help
+php -f tr1.php 
+clear
+php tr1.php 
+cat tr
+cat tr1.php 
+php -r "phpinfo();"
+php -r "phpinfo()"
+php -r ""
+php -a ""
+php -i 
+clear
+ls -la 
+cat .app.php.swp 
+rm .app.php.swp 
+ls -la 
+cat Gpg.php 
+ls -la 
+cat jsonRPCClient.php 
+This file is part of JSON-RPC PHP.
+JSON-RPC PHP is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+JSON-RPC PHP is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with JSON-RPC PHP; if not, write to the Free Software; Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA; */;  /**;  * The object of this class are generic jsonRPC 1.0 clients;  * http://json-rpc.org/wiki/specification;  *;  * @author sergio <jsonrpcphp@inservibile.org>
+ */
+class jsonRPCClient {
+	/**
+	 * Debug state
+	 *
+	 * @var boolean
+	 */
+	private $debug;
+	/**
+	 * The server URL
+	 *
+	 * @var string
+	 */
+	private $url;
+	/**
+	 * The request id
+	 *
+	 * @var integer
+	 */
+	private $id;
+clear
+ls -la 
+cat PGPEngine.php 
+ls -la 
+cat tormarket.pub 
+ls -la 
+cat versus 
+cat mongoapp.php 
+vi test1.php
+cat test1.php 
+cat mongoapp.php 
+ls -la 
+vi tr1.php 
+vi test1.php 
+php test1.php 
+php "phpinfo();"
+php -f test1.php 
+vi info.php 
+php -f test1.php 
+php info.php 
+cd ../app/lib/
+vi test1.php 
+vi ../../public/info.php 
+php ../../public/info.php
+vi ../../public/info.php 
+php ../../public/info.php
+php -i
+php test1.php 
+cat test1.php 
+ls -la 
+rm info.php 
+ls -la 
+                                              ls -la 
+rm .htaccess 
+ls -la 
+gh 
+sudo apt-get update 
+sudo apt-get install gh 
+gh attestation verify  
+sudo apt search gh 
+ghc
+sudo apt-get update 
+sudo apt-get install -y --no-install-recommends gh ghc
+ghc
+gh
+gh verify 
+git attestation verify --owner phpUser /tmp/pie.phar
+pie
+pie info 
+pie info 
+sudo pie info 
+pie show 
+pie show 
+pie repository:list
+sudo apt-get update 
+sudo apt search proc_open
+pear ls 
+pear
+ps -ef
+ls -la 
+php index.php 
+ls -la 
+                    ls -la 
+ls -la 
+cd ../app/lib/
+ls -la 
+php app.php 
+cat app.php 
+cat ../../public/index.php 
+cat ../app/config/config.php
+cat ../config/config.php
+cat /config/error_handling.php';
+cat ../config/error_handling.php
+vi app.php 
+cat app.php 
+vi test1.php 
+cat app.php 
+ls -la 
+vi test1.php 
+php test1.php 
