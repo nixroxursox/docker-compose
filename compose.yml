@@ -18,7 +18,8 @@ services:
       - "bitcoind.gc-pay.com: 10.89.7.9"
       - "postgres.gc-pay.com: 10.89.7.7"
       - "adminer.gc-pay.com: 10.89.7.6"
-      - "monerod.gc-pay.com: 10.89.7.12" 
+      - "monerod.gc-pay.com: 10.89.7.12"
+      - "thering.gc-pay.com: 10.89.6.10" 
     hostname: php_nginx.gc-pay.com
     volumes:
       - type: bind
@@ -57,7 +58,8 @@ services:
       - "bitcoind.gc-pay.com: 10.89.7.9"
       - "postgres.gc-pay.com: 10.89.7.7"
       - "adminer.gc-pay.com: 10.89.7.6"
-      - "monerod.gc-pay.com: 10.89.7.12" 
+      - "monerod.gc-pay.com: 10.89.7.12"
+      - "thering.gc-pay.com: 10.89.6.10" 
     hostname: php.gc-pay.com
     volumes:
       - type: bind
@@ -112,7 +114,8 @@ services:
       - "bitcoind.gc-pay.com: 10.89.7.9"
       - "postgres.gc-pay.com: 10.89.7.7"
       - "adminer.gc-pay.com: 10.89.7.6"
-      - "monerod.gc-pay.com: 10.89.7.12" 
+      - "monerod.gc-pay.com: 10.89.7.12"
+      - "thering.gc-pay.com: 10.89.6.10"  
     hostname: php.gc-pay.com
     volumes:
       - type: volume
@@ -169,6 +172,7 @@ services:
       - "adminer.gc-pay.com: 10.89.7.6"
       - "monerod.gc-pay.com: 10.89.7.12"
       - "monerod-gui.gc-pay.com: 10.89.7.4"
+      - "thering.gc-pay.com: 10.89.6.10" 
     hostname: monerod-gui.gc-pay.com
     depends_on:
       - monerod
@@ -226,7 +230,8 @@ services:
       - "bitcoind.gc-pay.com: 10.89.7.9"
       - "postgres.gc-pay.com: 10.89.7.7"
       - "adminer.gc-pay.com: 10.89.7.6"
-      - "monerod.gc-pay.com: 10.89.7.12" 
+      - "monerod.gc-pay.com: 10.89.7.12"
+      - "thering.gc-pay.com: 10.89.6.10" 
     hostname: mysqld.gc-pay.com
 
   # postgres:
@@ -297,7 +302,8 @@ services:
       - "bitcoind.gc-pay.com: 10.89.7.9"
       - "postgres.gc-pay.com: 10.89.7.7"
       - "adminer.gc-pay.com: 10.89.7.6"
-      - "monerod.gc-pay.com: 10.89.7.12" 
+      - "monerod.gc-pay.com: 10.89.7.12"
+      - "thering.gc-pay.com: 10.89.6.10" 
     hostname: adminer.gc-pay.com
 
 volumes:

@@ -1,103 +1,3 @@
-sudo su - 
-mysql 
-mysql -u rocky -p -S /tmp/mysql.sock 
-ls -la /tmp/
-mysql -u rocky -p -S /tmp/mysqld.sock 
-mysql -u app_Admin -p -S /tmp/mysqld.sock 
-dc p s
-df -h
-cd web/ou
-cd web/public/
-php index.php 
-php /var/www/html/gcpay_mvc/web/app/lib/app.php
-vi /var/www/html/gcpay_mvc/web/app/lib/app.php
-cd ../app/
-ls -q 
-ls -la 
-cd lib/
-ls -la 
-cd certs/
-ls -la 
-cat ca-key.pem 
-cat ca-key.pem 
-ls -la 
-cat client-cert.pem 
-l -al 
-ls -al 
-cat ca-key.pem
-cat ca.pem 
-openssl x509 -in ca.pem -text
-openssl x509 -in ca-key.pem -text
-ls -la 
-openssl x509 -in client-cert.pem -text
-ls -la 
-cat web/app/install/standard.sql 
-odir
-sodir
-ls -la 
-sodir
-ls -al 
-inidir
-ls -la 
-ls -al /tmp/
-clear
-webdir
-ls -a 
-cd ../app/
-ls -la 
-cd lib/
-ls -la 
-php app.php 
-vi app.php 
-ls -a
-ls -la 
-cd certs/
-ls -la 
-mv client.pem client-cert.pem 
-ls -la 
-cd ..
-vi app.php 
-cat app.php 
-vi test1.php
-vi test1.php
-php test1.php 
-vi test1.php
-php test1.php 
-ls -al vendor/autoload.php 
-cat vendor/autoload.php 
-cat /composer/autoload_real.php
-ls -al 
-vi app.php 
-ls
-cd  web/app/
-ls -la 
-[p,,APO,]PMPO]OP,POOOOOOOOOOOOOOOOOOOOOOOOOOOOO         OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,...
-php web/app/lib/test1.php 
-php web/app/lib/test 
-php web/app/test 
-cat web/app/test
-vi web/app/test
-php web/app/test 
-ls -la 
-cat /var/log/dpkg.log 
-ls -la 
-webdir
-ls -al 
-php test.php 
-cat test.php 
-vi test.php 
-php test
-ls -la ../app/lib/
-ls -la ../app/
-vi test
-vi test
-cat test
-cat ../app/test 
-vi test.php 
-vi test.php 
-vi test.php 
-php test.php 
-ls -al 
 6 7           6jppppmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[..............................
 php 
 php index.php 
@@ -498,3 +398,103 @@ ls -la
 php trun.php 
 cat app.php 
 php -i | grep mysq
+ls -la 
+php index.php 
+cd ../app/
+ls -la 
+cd lib/
+ls -la 
+php app.php 
+cat app.php 
+++
+ls -la 
+php trun.php 
+nslookup 
+ls -la 
+php PGPEngine.php 
+cat PGPEngine.php 
+ls -la 
+php mongoapp.php 
+cat app.php 
+cd ..
+ls -la 
+cd lib/
+ls -la 
+cat trun.php > tr1.php 
+rm trun.php 
+cat tr1.php 
+php tr1.php 
+inidir
+ls -la 
+mv docker-php-ext-xdebug.ini docker-php-ext-xdebug-no
+sodir
+ls -la 
+mv xdebug.so xdebug.so-no
+sudo mv xdebug.so xdebug.so-no
+cd ../app/lib/
+ls -las ../app/controller/listings.php
+ls -las ../
+vi trun.php 
+php trun.php 
+vi trun.php 
+php index.php 
+cd ../app/lib/
+php app.php 
+vi info.php
+php info.php 
+ls -la 
+php info.php 
+php-fpm info.php 
+php index.php 
+ps -ef
+ls -la 
+cd ../app/
+ls -la 
+cd views-modded/
+ls -la 
+cd ../views
+ls -la 
+cat _layout/default.php 
+cd ../
+ls -la 
+cd lib/
+ls -la 
+cat info.php 
+composer update 
+cd empire 
+ls -la 
+cat concurrentPgp.php 
+ls -la 
+ php Gpg.php 
+cat Gpg.php 
+ls -la 
+php pgpabstract.php 
+php --help
+ls -la 
+php messages.php 
+php openssl.php 
+php openssl.php 
+ls -la 
+php m-controller.php 
+php m-model.php 
+php pubkey_testing 
+cat pubkey_testing 
+cat proof 
+ls -la 
+cd empire 
+cat empire 
+ls -la 
+cat sigfile 
+ls -la 
+cat model.php 
+ls -la 
+cat exceptions/
+cat exceptions/access_denied.php 
+cat exceptions/not_found.php 
+composer pdate 
+composer update 
+0ls -la 
+ls -la 
+composer dump-autoload
+ls -la 
+cat app.php 

@@ -15,7 +15,7 @@
 
 # Command Line History (newest to oldest):
 :wq
-|2,0,1772847991,,"wq"
+|2,0,1773296688,,"wq"
 :q!
 |2,0,1772787662,,"q!"
 :q
@@ -65,72 +65,180 @@
 "0	LINE	0
 	require_once('/vendor/autoload.php');
 |3,0,0,1,1,0,1772442133,"require_once('/vendor/autoload.php');"
-"1	LINE	0
-	SSSSSS
-|3,0,1,1,1,0,1772846778,"SSSSSS"
+""1	LINE	0
+	$h->run();
+|3,1,1,1,1,0,1773296056,"$h->run();"
 "2	LINE	0
-	 = $h->run();
-|3,0,2,1,1,0,1772846771," = $h->run();"
+	SSSSSS
+|3,0,2,1,1,0,1772846778,"SSSSSS"
 "3	LINE	0
-	aaaaaaaaaa
-|3,0,3,1,1,0,1772757776,"aaaaaaaaaa"
+	 = $h->run();
+|3,0,3,1,1,0,1772846771," = $h->run();"
 "4	LINE	0
-					//return new \PDO('mysql:host=10.10.10.25;dbname=BCMART;port=3306;charset=utf8mb4', DB_USER, DB_PASS, $options);
-|3,0,4,1,1,0,1772663736,"				//return new \\PDO('mysql:host=10.10.10.25;dbname=BCMART;port=3306;charset=utf8mb4', DB_USER, DB_PASS, $options);"
+	aaaaaaaaaa
+|3,0,4,1,1,0,1772757776,"aaaaaaaaaa"
 "5	LINE	0
-	    //require_once '/code/vendor/autoload.php';
-|3,0,5,1,1,0,1772663734,"    //require_once '/code/vendor/autoload.php';"
+					//return new \PDO('mysql:host=10.10.10.25;dbname=BCMART;port=3306;charset=utf8mb4', DB_USER, DB_PASS, $options);
+|3,0,5,1,1,0,1772663736,"				//return new \\PDO('mysql:host=10.10.10.25;dbname=BCMART;port=3306;charset=utf8mb4', DB_USER, DB_PASS, $options);"
 "6	LINE	0
-	    //return $dbm = new MongoDB\Driver\Manager('mongodb://root:example@127.0.0.1:27017/admin');
-|3,0,6,1,1,0,1772663729,"    //return $dbm = new MongoDB\\Driver\\Manager('mongodb://root:example@127.0.0.1:27017/admin');"
+	    //require_once '/code/vendor/autoload.php';
+|3,0,6,1,1,0,1772663734,"    //require_once '/code/vendor/autoload.php';"
 "7	LINE	0
-	<?php
-|3,0,7,1,1,0,1772450305,"<?php"
-"8	LINE	0
-	    }
-|3,0,8,1,1,0,1772080871,"    }"
-"9	LINE	0
 	    //return $dbm = new MongoDB\Driver\Manager('mongodb://root:example@127.0.0.1:27017/admin');
-|3,0,9,1,1,0,1772080870,"    //return $dbm = new MongoDB\\Driver\\Manager('mongodb://root:example@127.0.0.1:27017/admin');"
-""-	CHAR	0
+|3,0,7,1,1,0,1772663729,"    //return $dbm = new MongoDB\\Driver\\Manager('mongodb://root:example@127.0.0.1:27017/admin');"
+"8	LINE	0
+	<?php
+|3,0,8,1,1,0,1772450305,"<?php"
+"9	LINE	0
+	    }
+|3,0,9,1,1,0,1772080871,"    }"
+"-	CHAR	0
 	XDEBUG
-|3,1,36,0,1,0,1772847069,"XDEBUG"
+|3,0,36,0,1,0,1772847069,"XDEBUG"
 
 # File marks:
-'0  22  15  ~/.bashrc
-|4,48,22,15,1772847991,"~/.bashrc"
-'1  24  38  ~/.bashrc
-|4,49,24,38,1772847098,"~/.bashrc"
-'2  24  38  ~/.bashrc
-|4,50,24,38,1772847098,"~/.bashrc"
-'3  7  9  /var/www/html/app/lib/trun.php
-|4,51,7,9,1772846802,"/var/www/html/app/lib/trun.php"
-'4  2  4  /var/www/html/app/lib/pgpabstract.php
-|4,52,2,4,1772787662,"/var/www/html/app/lib/pgpabstract.php"
-'5  108  34  /var/www/html/app/lib/sigfile
-|4,53,108,34,1772787441,"/var/www/html/app/lib/sigfile"
-'6  215  34  /var/www/html/app/lib/sigfile
-|4,54,215,34,1772787407,"/var/www/html/app/lib/sigfile"
-'7  108  34  /var/www/html/app/lib/sigfile
-|4,55,108,34,1772787407,"/var/www/html/app/lib/sigfile"
-'8  52  33  /var/www/html/app/lib/pubkey_testing
-|4,56,52,33,1772787253,"/var/www/html/app/lib/pubkey_testing"
-'9  3  37  /var/www/html/public/t2.php
-|4,57,3,37,1772766959,"/var/www/html/public/t2.php"
+'0  3  9  /var/www/html/app/lib/info.php
+|4,48,3,9,1773296688,"/var/www/html/app/lib/info.php"
+'1  10  8  /var/www/html/app/lib/trun.php
+|4,49,10,8,1773296333,"/var/www/html/app/lib/trun.php"
+'2  13  40  /var/www/html/app/lib/trun.php
+|4,50,13,40,1773296218,"/var/www/html/app/lib/trun.php"
+'3  11  40  /var/www/html/app/lib/trun.php
+|4,51,11,40,1773296218,"/var/www/html/app/lib/trun.php"
+'4  22  15  ~/.bashrc
+|4,52,22,15,1772847991,"~/.bashrc"
+'5  24  38  ~/.bashrc
+|4,53,24,38,1772847098,"~/.bashrc"
+'6  24  38  ~/.bashrc
+|4,54,24,38,1772847098,"~/.bashrc"
+'7  14  9  /var/www/html/app/lib/trun.php
+|4,55,14,9,1772846802,"/var/www/html/app/lib/trun.php"
+'8  7  9  /var/www/html/app/lib/trun.php
+|4,56,7,9,1772846802,"/var/www/html/app/lib/trun.php"
+'9  12  9  /var/www/html/app/lib/trun.php
+|4,57,12,9,1772846802,"/var/www/html/app/lib/trun.php"
 
 # Jumplist (newest first):
+-'  3  9  /var/www/html/app/lib/info.php
+|4,39,3,9,1773296688,"/var/www/html/app/lib/info.php"
+-'  1  0  /var/www/html/app/lib/info.php
+|4,39,1,0,1773296671,"/var/www/html/app/lib/info.php"
+-'  10  8  /var/www/html/app/lib/trun.php
+|4,39,10,8,1773296333,"/var/www/html/app/lib/trun.php"
+-'  10  8  /var/www/html/app/lib/trun.php
+|4,39,10,8,1773296333,"/var/www/html/app/lib/trun.php"
+-'  13  40  /var/www/html/app/lib/trun.php
+|4,39,13,40,1773296229,"/var/www/html/app/lib/trun.php"
+-'  13  40  /var/www/html/app/lib/trun.php
+|4,39,13,40,1773296229,"/var/www/html/app/lib/trun.php"
+-'  11  40  /var/www/html/app/lib/trun.php
+|4,39,11,40,1773296218,"/var/www/html/app/lib/trun.php"
+-'  11  40  /var/www/html/app/lib/trun.php
+|4,39,11,40,1773296218,"/var/www/html/app/lib/trun.php"
+-'  14  9  /var/www/html/app/lib/trun.php
+|4,39,14,9,1773296046,"/var/www/html/app/lib/trun.php"
+-'  12  9  /var/www/html/app/lib/trun.php
+|4,39,12,9,1773296046,"/var/www/html/app/lib/trun.php"
+-'  14  9  /var/www/html/app/lib/trun.php
+|4,39,14,9,1773296046,"/var/www/html/app/lib/trun.php"
+-'  12  9  /var/www/html/app/lib/trun.php
+|4,39,12,9,1773296046,"/var/www/html/app/lib/trun.php"
+-'  22  15  ~/.bashrc
+|4,39,22,15,1772847991,"~/.bashrc"
+-'  22  15  ~/.bashrc
+|4,39,22,15,1772847991,"~/.bashrc"
+-'  22  15  ~/.bashrc
+|4,39,22,15,1772847991,"~/.bashrc"
+-'  22  15  ~/.bashrc
+|4,39,22,15,1772847991,"~/.bashrc"
+-'  22  15  ~/.bashrc
+|4,39,22,15,1772847991,"~/.bashrc"
+-'  22  15  ~/.bashrc
+|4,39,22,15,1772847991,"~/.bashrc"
+-'  22  15  ~/.bashrc
+|4,39,22,15,1772847991,"~/.bashrc"
 -'  22  15  ~/.bashrc
 |4,39,22,15,1772847991,"~/.bashrc"
 -'  24  38  ~/.bashrc
 |4,39,24,38,1772847896,"~/.bashrc"
 -'  24  38  ~/.bashrc
+|4,39,24,38,1772847896,"~/.bashrc"
+-'  24  38  ~/.bashrc
+|4,39,24,38,1772847896,"~/.bashrc"
+-'  24  38  ~/.bashrc
+|4,39,24,38,1772847896,"~/.bashrc"
+-'  24  38  ~/.bashrc
+|4,39,24,38,1772847896,"~/.bashrc"
+-'  24  38  ~/.bashrc
+|4,39,24,38,1772847896,"~/.bashrc"
+-'  24  38  ~/.bashrc
+|4,39,24,38,1772847896,"~/.bashrc"
+-'  24  38  ~/.bashrc
+|4,39,24,38,1772847896,"~/.bashrc"
+-'  24  38  ~/.bashrc
 |4,39,24,38,1772847098,"~/.bashrc"
+-'  24  38  ~/.bashrc
+|4,39,24,38,1772847098,"~/.bashrc"
+-'  24  38  ~/.bashrc
+|4,39,24,38,1772847098,"~/.bashrc"
+-'  24  38  ~/.bashrc
+|4,39,24,38,1772847098,"~/.bashrc"
+-'  24  38  ~/.bashrc
+|4,39,24,38,1772847098,"~/.bashrc"
+-'  24  38  ~/.bashrc
+|4,39,24,38,1772847098,"~/.bashrc"
+-'  24  38  ~/.bashrc
+|4,39,24,38,1772847098,"~/.bashrc"
+-'  24  38  ~/.bashrc
+|4,39,24,38,1772847098,"~/.bashrc"
+-'  22  22  ~/.bashrc
+|4,39,22,22,1772847079,"~/.bashrc"
+-'  22  22  ~/.bashrc
+|4,39,22,22,1772847079,"~/.bashrc"
+-'  22  22  ~/.bashrc
+|4,39,22,22,1772847079,"~/.bashrc"
+-'  22  22  ~/.bashrc
+|4,39,22,22,1772847079,"~/.bashrc"
+-'  22  22  ~/.bashrc
+|4,39,22,22,1772847079,"~/.bashrc"
+-'  22  22  ~/.bashrc
+|4,39,22,22,1772847079,"~/.bashrc"
+-'  22  22  ~/.bashrc
+|4,39,22,22,1772847079,"~/.bashrc"
 -'  22  22  ~/.bashrc
 |4,39,22,22,1772847079,"~/.bashrc"
 -'  29  22  ~/.bashrc
 |4,39,29,22,1772847012,"~/.bashrc"
 -'  29  22  ~/.bashrc
 |4,39,29,22,1772847012,"~/.bashrc"
+-'  29  22  ~/.bashrc
+|4,39,29,22,1772847012,"~/.bashrc"
+-'  29  22  ~/.bashrc
+|4,39,29,22,1772847012,"~/.bashrc"
+-'  29  22  ~/.bashrc
+|4,39,29,22,1772847012,"~/.bashrc"
+-'  29  22  ~/.bashrc
+|4,39,29,22,1772847012,"~/.bashrc"
+-'  29  22  ~/.bashrc
+|4,39,29,22,1772847012,"~/.bashrc"
+-'  29  22  ~/.bashrc
+|4,39,29,22,1772847012,"~/.bashrc"
+-'  29  22  ~/.bashrc
+|4,39,29,22,1772847012,"~/.bashrc"
+-'  29  22  ~/.bashrc
+|4,39,29,22,1772847012,"~/.bashrc"
+-'  29  22  ~/.bashrc
+|4,39,29,22,1772847012,"~/.bashrc"
+-'  29  22  ~/.bashrc
+|4,39,29,22,1772847012,"~/.bashrc"
+-'  29  22  ~/.bashrc
+|4,39,29,22,1772847012,"~/.bashrc"
+-'  29  22  ~/.bashrc
+|4,39,29,22,1772847012,"~/.bashrc"
+-'  29  22  ~/.bashrc
+|4,39,29,22,1772847012,"~/.bashrc"
+-'  29  22  ~/.bashrc
+|4,39,29,22,1772847012,"~/.bashrc"
 -'  7  9  /var/www/html/app/lib/trun.php
 |4,39,7,9,1772846802,"/var/www/html/app/lib/trun.php"
 -'  7  9  /var/www/html/app/lib/trun.php
@@ -139,6 +247,34 @@
 |4,39,7,9,1772846802,"/var/www/html/app/lib/trun.php"
 -'  7  9  /var/www/html/app/lib/trun.php
 |4,39,7,9,1772846802,"/var/www/html/app/lib/trun.php"
+-'  7  9  /var/www/html/app/lib/trun.php
+|4,39,7,9,1772846802,"/var/www/html/app/lib/trun.php"
+-'  7  9  /var/www/html/app/lib/trun.php
+|4,39,7,9,1772846802,"/var/www/html/app/lib/trun.php"
+-'  7  9  /var/www/html/app/lib/trun.php
+|4,39,7,9,1772846802,"/var/www/html/app/lib/trun.php"
+-'  7  9  /var/www/html/app/lib/trun.php
+|4,39,7,9,1772846802,"/var/www/html/app/lib/trun.php"
+-'  7  9  /var/www/html/app/lib/trun.php
+|4,39,7,9,1772846802,"/var/www/html/app/lib/trun.php"
+-'  7  9  /var/www/html/app/lib/trun.php
+|4,39,7,9,1772846802,"/var/www/html/app/lib/trun.php"
+-'  1  0  /var/www/html/app/lib/trun.php
+|4,39,1,0,1772846234,"/var/www/html/app/lib/trun.php"
+-'  1  0  /var/www/html/app/lib/trun.php
+|4,39,1,0,1772846234,"/var/www/html/app/lib/trun.php"
+-'  1  0  /var/www/html/app/lib/trun.php
+|4,39,1,0,1772846234,"/var/www/html/app/lib/trun.php"
+-'  1  0  /var/www/html/app/lib/trun.php
+|4,39,1,0,1772846234,"/var/www/html/app/lib/trun.php"
+-'  1  0  /var/www/html/app/lib/trun.php
+|4,39,1,0,1772846234,"/var/www/html/app/lib/trun.php"
+-'  1  0  /var/www/html/app/lib/trun.php
+|4,39,1,0,1772846234,"/var/www/html/app/lib/trun.php"
+-'  1  0  /var/www/html/app/lib/trun.php
+|4,39,1,0,1772846234,"/var/www/html/app/lib/trun.php"
+-'  1  0  /var/www/html/app/lib/trun.php
+|4,39,1,0,1772846234,"/var/www/html/app/lib/trun.php"
 -'  1  0  /var/www/html/app/lib/trun.php
 |4,39,1,0,1772846234,"/var/www/html/app/lib/trun.php"
 -'  1  0  /var/www/html/app/lib/trun.php
@@ -163,164 +299,54 @@
 |4,39,2,4,1772787662,"/var/www/html/app/lib/pgpabstract.php"
 -'  2  4  /var/www/html/app/lib/pgpabstract.php
 |4,39,2,4,1772787662,"/var/www/html/app/lib/pgpabstract.php"
--'  1  0  /var/www/html/app/lib/pgpabstract.php
-|4,39,1,0,1772787486,"/var/www/html/app/lib/pgpabstract.php"
--'  1  0  /var/www/html/app/lib/pgpabstract.php
-|4,39,1,0,1772787486,"/var/www/html/app/lib/pgpabstract.php"
--'  1  0  /var/www/html/app/lib/pgpabstract.php
-|4,39,1,0,1772787486,"/var/www/html/app/lib/pgpabstract.php"
--'  1  0  /var/www/html/app/lib/pgpabstract.php
-|4,39,1,0,1772787486,"/var/www/html/app/lib/pgpabstract.php"
--'  1  0  /var/www/html/app/lib/pgpabstract.php
-|4,39,1,0,1772787486,"/var/www/html/app/lib/pgpabstract.php"
--'  1  0  /var/www/html/app/lib/pgpabstract.php
-|4,39,1,0,1772787486,"/var/www/html/app/lib/pgpabstract.php"
--'  1  0  /var/www/html/app/lib/pgpabstract.php
-|4,39,1,0,1772787486,"/var/www/html/app/lib/pgpabstract.php"
--'  1  0  /var/www/html/app/lib/pgpabstract.php
-|4,39,1,0,1772787486,"/var/www/html/app/lib/pgpabstract.php"
--'  108  34  /var/www/html/app/lib/sigfile
-|4,39,108,34,1772787441,"/var/www/html/app/lib/sigfile"
--'  108  34  /var/www/html/app/lib/sigfile
-|4,39,108,34,1772787441,"/var/www/html/app/lib/sigfile"
--'  108  34  /var/www/html/app/lib/sigfile
-|4,39,108,34,1772787441,"/var/www/html/app/lib/sigfile"
--'  108  34  /var/www/html/app/lib/sigfile
-|4,39,108,34,1772787441,"/var/www/html/app/lib/sigfile"
--'  108  34  /var/www/html/app/lib/sigfile
-|4,39,108,34,1772787441,"/var/www/html/app/lib/sigfile"
--'  108  34  /var/www/html/app/lib/sigfile
-|4,39,108,34,1772787441,"/var/www/html/app/lib/sigfile"
--'  108  34  /var/www/html/app/lib/sigfile
-|4,39,108,34,1772787441,"/var/www/html/app/lib/sigfile"
--'  108  34  /var/www/html/app/lib/sigfile
-|4,39,108,34,1772787441,"/var/www/html/app/lib/sigfile"
--'  108  34  /var/www/html/app/lib/sigfile
-|4,39,108,34,1772787441,"/var/www/html/app/lib/sigfile"
--'  108  34  /var/www/html/app/lib/sigfile
-|4,39,108,34,1772787441,"/var/www/html/app/lib/sigfile"
--'  108  34  /var/www/html/app/lib/sigfile
-|4,39,108,34,1772787441,"/var/www/html/app/lib/sigfile"
--'  108  34  /var/www/html/app/lib/sigfile
-|4,39,108,34,1772787441,"/var/www/html/app/lib/sigfile"
--'  108  34  /var/www/html/app/lib/sigfile
-|4,39,108,34,1772787441,"/var/www/html/app/lib/sigfile"
--'  108  34  /var/www/html/app/lib/sigfile
-|4,39,108,34,1772787441,"/var/www/html/app/lib/sigfile"
--'  108  34  /var/www/html/app/lib/sigfile
-|4,39,108,34,1772787441,"/var/www/html/app/lib/sigfile"
--'  108  34  /var/www/html/app/lib/sigfile
-|4,39,108,34,1772787441,"/var/www/html/app/lib/sigfile"
--'  1  0  /var/www/html/app/lib/sigfile
-|4,39,1,0,1772787431,"/var/www/html/app/lib/sigfile"
--'  1  0  /var/www/html/app/lib/sigfile
-|4,39,1,0,1772787431,"/var/www/html/app/lib/sigfile"
--'  1  0  /var/www/html/app/lib/sigfile
-|4,39,1,0,1772787431,"/var/www/html/app/lib/sigfile"
--'  1  0  /var/www/html/app/lib/sigfile
-|4,39,1,0,1772787431,"/var/www/html/app/lib/sigfile"
--'  1  0  /var/www/html/app/lib/sigfile
-|4,39,1,0,1772787431,"/var/www/html/app/lib/sigfile"
--'  1  0  /var/www/html/app/lib/sigfile
-|4,39,1,0,1772787431,"/var/www/html/app/lib/sigfile"
--'  1  0  /var/www/html/app/lib/sigfile
-|4,39,1,0,1772787431,"/var/www/html/app/lib/sigfile"
--'  1  0  /var/www/html/app/lib/sigfile
-|4,39,1,0,1772787431,"/var/www/html/app/lib/sigfile"
--'  1  0  /var/www/html/app/lib/sigfile
-|4,39,1,0,1772787431,"/var/www/html/app/lib/sigfile"
--'  1  0  /var/www/html/app/lib/sigfile
-|4,39,1,0,1772787431,"/var/www/html/app/lib/sigfile"
--'  1  0  /var/www/html/app/lib/sigfile
-|4,39,1,0,1772787431,"/var/www/html/app/lib/sigfile"
--'  1  0  /var/www/html/app/lib/sigfile
-|4,39,1,0,1772787431,"/var/www/html/app/lib/sigfile"
--'  1  0  /var/www/html/app/lib/sigfile
-|4,39,1,0,1772787431,"/var/www/html/app/lib/sigfile"
--'  1  0  /var/www/html/app/lib/sigfile
-|4,39,1,0,1772787431,"/var/www/html/app/lib/sigfile"
--'  1  0  /var/www/html/app/lib/sigfile
-|4,39,1,0,1772787431,"/var/www/html/app/lib/sigfile"
--'  1  0  /var/www/html/app/lib/sigfile
-|4,39,1,0,1772787431,"/var/www/html/app/lib/sigfile"
--'  215  34  /var/www/html/app/lib/sigfile
-|4,39,215,34,1772787407,"/var/www/html/app/lib/sigfile"
--'  108  34  /var/www/html/app/lib/sigfile
-|4,39,108,34,1772787407,"/var/www/html/app/lib/sigfile"
--'  215  34  /var/www/html/app/lib/sigfile
-|4,39,215,34,1772787407,"/var/www/html/app/lib/sigfile"
--'  108  34  /var/www/html/app/lib/sigfile
-|4,39,108,34,1772787407,"/var/www/html/app/lib/sigfile"
--'  215  34  /var/www/html/app/lib/sigfile
-|4,39,215,34,1772787407,"/var/www/html/app/lib/sigfile"
--'  108  34  /var/www/html/app/lib/sigfile
-|4,39,108,34,1772787407,"/var/www/html/app/lib/sigfile"
--'  215  34  /var/www/html/app/lib/sigfile
-|4,39,215,34,1772787407,"/var/www/html/app/lib/sigfile"
--'  108  34  /var/www/html/app/lib/sigfile
-|4,39,108,34,1772787407,"/var/www/html/app/lib/sigfile"
--'  215  34  /var/www/html/app/lib/sigfile
-|4,39,215,34,1772787407,"/var/www/html/app/lib/sigfile"
--'  108  34  /var/www/html/app/lib/sigfile
-|4,39,108,34,1772787407,"/var/www/html/app/lib/sigfile"
--'  215  34  /var/www/html/app/lib/sigfile
-|4,39,215,34,1772787407,"/var/www/html/app/lib/sigfile"
--'  108  34  /var/www/html/app/lib/sigfile
-|4,39,108,34,1772787407,"/var/www/html/app/lib/sigfile"
--'  215  34  /var/www/html/app/lib/sigfile
-|4,39,215,34,1772787407,"/var/www/html/app/lib/sigfile"
--'  108  34  /var/www/html/app/lib/sigfile
-|4,39,108,34,1772787407,"/var/www/html/app/lib/sigfile"
--'  215  34  /var/www/html/app/lib/sigfile
-|4,39,215,34,1772787407,"/var/www/html/app/lib/sigfile"
--'  108  34  /var/www/html/app/lib/sigfile
-|4,39,108,34,1772787407,"/var/www/html/app/lib/sigfile"
--'  215  34  /var/www/html/app/lib/sigfile
-|4,39,215,34,1772787407,"/var/www/html/app/lib/sigfile"
--'  108  34  /var/www/html/app/lib/sigfile
-|4,39,108,34,1772787407,"/var/www/html/app/lib/sigfile"
--'  215  34  /var/www/html/app/lib/sigfile
-|4,39,215,34,1772787407,"/var/www/html/app/lib/sigfile"
--'  108  34  /var/www/html/app/lib/sigfile
-|4,39,108,34,1772787407,"/var/www/html/app/lib/sigfile"
--'  215  34  /var/www/html/app/lib/sigfile
-|4,39,215,34,1772787407,"/var/www/html/app/lib/sigfile"
--'  108  34  /var/www/html/app/lib/sigfile
-|4,39,108,34,1772787407,"/var/www/html/app/lib/sigfile"
--'  215  34  /var/www/html/app/lib/sigfile
-|4,39,215,34,1772787407,"/var/www/html/app/lib/sigfile"
--'  108  34  /var/www/html/app/lib/sigfile
-|4,39,108,34,1772787407,"/var/www/html/app/lib/sigfile"
--'  215  34  /var/www/html/app/lib/sigfile
-|4,39,215,34,1772787407,"/var/www/html/app/lib/sigfile"
--'  108  34  /var/www/html/app/lib/sigfile
-|4,39,108,34,1772787407,"/var/www/html/app/lib/sigfile"
--'  215  34  /var/www/html/app/lib/sigfile
-|4,39,215,34,1772787407,"/var/www/html/app/lib/sigfile"
--'  108  34  /var/www/html/app/lib/sigfile
-|4,39,108,34,1772787407,"/var/www/html/app/lib/sigfile"
--'  215  34  /var/www/html/app/lib/sigfile
-|4,39,215,34,1772787407,"/var/www/html/app/lib/sigfile"
--'  108  34  /var/www/html/app/lib/sigfile
-|4,39,108,34,1772787407,"/var/www/html/app/lib/sigfile"
--'  215  34  /var/www/html/app/lib/sigfile
-|4,39,215,34,1772787407,"/var/www/html/app/lib/sigfile"
--'  108  34  /var/www/html/app/lib/sigfile
-|4,39,108,34,1772787407,"/var/www/html/app/lib/sigfile"
--'  1  0  /var/www/html/app/lib/sigfile
-|4,39,1,0,1772787393,"/var/www/html/app/lib/sigfile"
--'  1  0  /var/www/html/app/lib/sigfile
-|4,39,1,0,1772787393,"/var/www/html/app/lib/sigfile"
--'  1  0  /var/www/html/app/lib/sigfile
-|4,39,1,0,1772787393,"/var/www/html/app/lib/sigfile"
--'  1  0  /var/www/html/app/lib/sigfile
-|4,39,1,0,1772787393,"/var/www/html/app/lib/sigfile"
--'  1  0  /var/www/html/app/lib/sigfile
-|4,39,1,0,1772787393,"/var/www/html/app/lib/sigfile"
--'  1  0  /var/www/html/app/lib/sigfile
-|4,39,1,0,1772787393,"/var/www/html/app/lib/sigfile"
+-'  2  4  /var/www/html/app/lib/pgpabstract.php
+|4,39,2,4,1772787662,"/var/www/html/app/lib/pgpabstract.php"
+-'  2  4  /var/www/html/app/lib/pgpabstract.php
+|4,39,2,4,1772787662,"/var/www/html/app/lib/pgpabstract.php"
+-'  2  4  /var/www/html/app/lib/pgpabstract.php
+|4,39,2,4,1772787662,"/var/www/html/app/lib/pgpabstract.php"
+-'  2  4  /var/www/html/app/lib/pgpabstract.php
+|4,39,2,4,1772787662,"/var/www/html/app/lib/pgpabstract.php"
+-'  2  4  /var/www/html/app/lib/pgpabstract.php
+|4,39,2,4,1772787662,"/var/www/html/app/lib/pgpabstract.php"
+-'  2  4  /var/www/html/app/lib/pgpabstract.php
+|4,39,2,4,1772787662,"/var/www/html/app/lib/pgpabstract.php"
+-'  2  4  /var/www/html/app/lib/pgpabstract.php
+|4,39,2,4,1772787662,"/var/www/html/app/lib/pgpabstract.php"
+-'  2  4  /var/www/html/app/lib/pgpabstract.php
+|4,39,2,4,1772787662,"/var/www/html/app/lib/pgpabstract.php"
+-'  2  4  /var/www/html/app/lib/pgpabstract.php
+|4,39,2,4,1772787662,"/var/www/html/app/lib/pgpabstract.php"
+-'  2  4  /var/www/html/app/lib/pgpabstract.php
+|4,39,2,4,1772787662,"/var/www/html/app/lib/pgpabstract.php"
 
 # History of marks within files (newest to oldest):
+
+> /var/www/html/app/lib/info.php
+	*	1773296685	0
+	"	3	9
+	^	3	10
+	.	3	9
+	+	3	9
+
+> /var/www/html/app/lib/trun.php
+	*	1773296331	0
+	"	10	8
+	^	10	9
+	.	10	8
+	+	4	4
+	+	3	20
+	+	11	0
+	+	14	0
+	+	13	35
+	+	8	5
+	+	12	0
+	+	6	13
+	+	8	29
+	+	13	40
+	+	8	7
+	+	9	32
+	+	10	8
 
 > ~/.bashrc
 	*	1772847988	0
@@ -347,17 +373,6 @@
 	+	22	13
 	+	23	6
 	+	24	52
-
-> /var/www/html/app/lib/trun.php
-	*	1772846799	0
-	"	7	9
-	^	7	10
-	.	7	9
-	+	4	4
-	+	3	20
-	+	5	0
-	+	8	0
-	+	7	9
 
 > /var/www/html/app/lib/pgpabstract.php
 	*	1772787657	0
