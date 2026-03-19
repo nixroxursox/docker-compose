@@ -6,6 +6,7 @@ services:
     ports:
       - 8888:8888
       - 8484:8484
+      - 8686:8686
     networks:
       ecommnet:
         ipv4_address: 10.89.7.10

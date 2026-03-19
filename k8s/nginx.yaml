@@ -1,0 +1,80 @@
+# Save the output of this file and use kubectl create -f to import
+# it into Kubernetes.
+#
+# Created with podman-5.8.0
+
+# NOTE: If you generated this yaml from an unprivileged and rootless podman container on an SELinux
+# enabled system, check the podman generate kube man page for steps to follow to ensure that your pod/container
+# has the right permissions to access the volumes added.
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2026-03-16T03:36:43Z"
+  labels:
+    app: kw-nginx-1-pod
+  name: kw-nginx-1-pod
+spec:
+  ports:
+  - name: "8484"
+    nodePort: 30033
+    port: 8484
+    targetPort: 8484
+  - name: "8686"
+    nodePort: 32105
+    port: 8686
+    targetPort: 8686
+  - name: "8888"
+    nodePort: 32056
+    port: 8888
+    targetPort: 8888
+  selector:
+    app: kw-nginx-1-pod
+  type: NodePort
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: "2026-03-16T03:36:43Z"
+  labels:
+    app: kw-nginx-1-pod
+  name: kw-nginx-1-pod
+spec:
+  containers:
+  - args:
+    - /sbin/nginx
+    - -g
+    - daemon off;
+    env:
+    - name: HOSTNAME
+      value: php-nginx
+    image: quay.io/nixroxursox/nginx:1.5
+    name: kw-nginx-1
+    ports:
+    - containerPort: 8484
+    - containerPort: 8686
+    - containerPort: 8888
+    securityContext:
+      runAsGroup: 101
+      runAsUser: 101
+    volumeMounts:
+    - mountPath: /etc/nginx
+      name: users-rjallen-ecom-docker-compose-nnginx-host-0
+    - mountPath: /var/www
+      name: users-rjallen-ecom-docker-compose-nnginx-data-host-1
+    - mountPath: /tmp
+      name: kw-sockets-pvc
+  hostname: php-nginx
+  restartPolicy: Always
+  volumes:
+  - hostPath:
+      path: /Users/rjallen/ecom/docker_compose/nnginx
+      type: Directory
+    name: users-rjallen-ecom-docker-compose-nnginx-host-0
+  - hostPath:
+      path: /Users/rjallen/ecom/docker_compose/nnginx/data
+      type: Directory
+    name: users-rjallen-ecom-docker-compose-nnginx-data-host-1
+  - name: kw-sockets-pvc
+    persistentVolumeClaim:
+      claimName: kw-sockets

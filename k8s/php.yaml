@@ -1,0 +1,119 @@
+# Save the output of this file and use kubectl create -f to import
+# it into Kubernetes.
+#
+# Created with podman-5.8.0
+
+# NOTE: If you generated this yaml from an unprivileged and rootless podman container on an SELinux
+# enabled system, check the podman generate kube man page for steps to follow to ensure that your pod/container
+# has the right permissions to access the volumes added.
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2026-03-16T03:37:39Z"
+  labels:
+    app: kw-php-1-pod
+  name: kw-php-1-pod
+spec:
+  ports:
+  - name: "9003"
+    nodePort: 30365
+    port: 9003
+    targetPort: 9003
+  - name: "9000"
+    nodePort: 30366
+    port: 9000
+    targetPort: 9000
+  selector:
+    app: kw-php-1-pod
+  type: NodePort
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: "2026-03-16T03:37:39Z"
+  labels:
+    app: kw-php-1-pod
+  name: kw-php-1-pod
+spec:
+  containers:
+  - args:
+    - php-fpm
+    env:
+    - name: XDEBUG_MODE
+      value: debug
+    - name: XDEBUG_CONFIG
+      value: client_host=php client_port=9003 log=/dev/stdout
+    - name: PHP_IDE_CONFIG
+      value: serverName=php
+    - name: PHP_DATE_TIMEZONE
+      value: UTC
+    - name: HOSTNAME
+      value: php
+    image: quay.io/nixroxursox/php:2.7
+    name: kw-php-1
+    ports:
+    - containerPort: 9003
+    securityContext:
+      runAsGroup: 101
+      runAsUser: 101
+    volumeMounts:
+    - mountPath: /var/www/html/app
+      name: users-rjallen-ecom-src-php-webapp-app-host-0
+    - mountPath: /usr/local/etc/php-fpm.d
+      name: users-rjallen-ecom-docker-compose-php-8.4.17-config-files-php-fpm.d-host-1
+    - mountPath: /usr/local/etc/php-fpm.conf
+      name: users-rjallen-ecom-docker-compose-php-8.4.17-config-files-php-fpm.conf-host-2
+    - mountPath: /usr/local/etc/php
+      name: users-rjallen-ecom-docker-compose-php-8.4.17-config-files-php-host-3
+    - mountPath: /var/www/html/public
+      name: users-rjallen-ecom-src-php-webapp-public-host-4
+    - mountPath: /home/phpUser
+      name: users-rjallen-ecom-docker-compose-php-8.4.17-home-dir-host-5
+    - mountPath: /var/www/html/app/lib/certs
+      name: users-rjallen-ecom-docker-compose-php-8.4.17-certs-host-6
+    - mountPath: /usr/local/lib/php/extensions/no-debug-non-zts-20240924
+      name: kw-so-files-pvc
+    - mountPath: /tmp/pools/www
+      name: kw-pools-pvc
+    - mountPath: /tmp
+      name: kw-sockets-pvc
+  hostname: php
+  volumes:
+  - hostPath:
+      path: /Users/rjallen/ecom/src/php-webapp/app
+      type: Directory
+    name: users-rjallen-ecom-src-php-webapp-app-host-0
+  - hostPath:
+      path: /Users/rjallen/ecom/docker_compose/php-8.4.17/config_files/php-fpm.d
+      type: Directory
+    name: users-rjallen-ecom-docker-compose-php-8.4.17-config-files-php-fpm.d-host-1
+  - hostPath:
+      path: /Users/rjallen/ecom/docker_compose/php-8.4.17/config_files/php-fpm.conf
+      type: File
+    name: users-rjallen-ecom-docker-compose-php-8.4.17-config-files-php-fpm.conf-host-2
+  - hostPath:
+      path: /Users/rjallen/ecom/docker_compose/php-8.4.17/config_files/php
+      type: Directory
+    name: users-rjallen-ecom-docker-compose-php-8.4.17-config-files-php-host-3
+  - hostPath:
+      path: /Users/rjallen/ecom/src/php-webapp/public
+      type: Directory
+    name: users-rjallen-ecom-src-php-webapp-public-host-4
+  - hostPath:
+      path: /Users/rjallen/ecom/docker_compose/php-8.4.17/home_dir
+      type: Directory
+    name: users-rjallen-ecom-docker-compose-php-8.4.17-home-dir-host-5
+  - hostPath:
+      path: /Users/rjallen/ecom/docker_compose/php-8.4.17/certs
+      type: Directory
+    name: users-rjallen-ecom-docker-compose-php-8.4.17-certs-host-6
+  - name: kw-so-files-pvc
+    persistentVolumeClaim:
+      claimName: kw-so-files
+  - name: kw-pools-pvc
+    persistentVolumeClaim:
+      claimName: kw-pools
+  - name: kw-sockets-pvc
+    persistentVolumeClaim:
+      claimName: kw-sockets

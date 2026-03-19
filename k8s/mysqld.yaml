@@ -1,0 +1,104 @@
+# Save the output of this file and use kubectl create -f to import
+# it into Kubernetes.
+#
+# Created with podman-5.8.0
+
+# NOTE: If you generated this yaml from an unprivileged and rootless podman container on an SELinux
+# enabled system, check the podman generate kube man page for steps to follow to ensure that your pod/container
+# has the right permissions to access the volumes added.
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2026-03-16T03:38:10Z"
+  labels:
+    app: kw-mysqld-1-pod
+  name: kw-mysqld-1-pod
+spec:
+  ports:
+  - name: "3306"
+    nodePort: 30514
+    port: 3306
+    targetPort: 3306
+  - name: "33060"
+    nodePort: 30158
+    port: 33060
+    targetPort: 33060
+  selector:
+    app: kw-mysqld-1-pod
+  type: NodePort
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: "2026-03-16T03:38:10Z"
+  labels:
+    app: kw-mysqld-1-pod
+  name: kw-mysqld-1-pod
+spec:
+  containers:
+  - args:
+    - mysqld
+    env:
+    - name: MYSQL_HOST
+      value: mysqld
+    - name: MYSQL_USER
+      value: mysql
+    - name: MYSQL_ROOT_PASSWORD
+      value: changeMe
+    - name: MYSQL_ALLOW_EMPTY_PASSWORD
+      value: "yes"
+    - name: MYSQL_DATABASE
+      value: website_App
+    - name: MYSQL_PASSWORD
+      value: changeMe
+    - name: MYSQL_PORT
+      value: "3306"
+    - name: HOSTNAME
+      value: mysqld
+    image: docker.io/itsnix/mysql:2.1
+    name: kw-mysqld-1
+    ports:
+    - containerPort: 3306
+    - containerPort: 33060
+    securityContext:
+      capabilities:
+        add:
+        - CAP_SYS_NICE
+      runAsGroup: 101
+      runAsUser: 101
+    volumeMounts:
+    - mountPath: /etc/certs
+      name: users-rjallen-ecom-docker-compose-mysql-certs-host-0
+    - mountPath: /etc/my.cnf
+      name: users-rjallen-ecom-docker-compose-mysql-my.cnf-host-1
+    - mountPath: /tmp
+      name: kw-sockets-pvc
+    - mountPath: /var/lib/mysql-logs
+      name: kw-mysql-logs-pvc
+    - mountPath: /var/lib/mysql
+      name: kw-mysql-data-pvc
+    - mountPath: /var/lib/mysql-files
+      name: kw-mysql-files-pvc
+  hostname: mysqld
+  volumes:
+  - hostPath:
+      path: /Users/rjallen/ecom/docker_compose/mysql/certs
+      type: Directory
+    name: users-rjallen-ecom-docker-compose-mysql-certs-host-0
+  - hostPath:
+      path: /Users/rjallen/ecom/docker_compose/mysql/my.cnf
+      type: File
+    name: users-rjallen-ecom-docker-compose-mysql-my.cnf-host-1
+  - name: kw-sockets-pvc
+    persistentVolumeClaim:
+      claimName: kw-sockets
+  - name: kw-mysql-logs-pvc
+    persistentVolumeClaim:
+      claimName: kw-mysql-logs
+  - name: kw-mysql-data-pvc
+    persistentVolumeClaim:
+      claimName: kw-mysql-data
+  - name: kw-mysql-files-pvc
+    persistentVolumeClaim:
+      claimName: kw-mysql-files
